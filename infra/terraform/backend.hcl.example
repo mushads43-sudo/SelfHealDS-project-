@@ -1,0 +1,5 @@
+# Copy to backend.hcl after running scripts/bootstrap-tfstate.sh
+resource_group_name  = "rg-selfhealds-tfstate"
+storage_account_name = "selfhealdstfstateXXXXX"
+container_name       = "tfstate"
+key                  = "selfhealds.prod.tfstate"

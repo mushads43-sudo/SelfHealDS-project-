@@ -1,0 +1,93 @@
+# =============================================================================
+# SelfHealDS - Infrastructure as Code (Terraform on Azure)
+#   PR touching infra/terraform  -> fmt, validate, plan (shown in job summary)
+#   push to main (infra changed) -> plan + apply (environment "infrastructure",
+#                                   add yourself as required reviewer to approve)
+#   manual run                   -> plan | apply | destroy (save Azure credit)
+# =============================================================================
+name: Terraform
+
+on:
+  pull_request:
+    paths: ["infra/terraform/**", ".github/workflows/terraform.yml"]
+  push:
+    branches: [main]
+    paths: ["infra/terraform/**"]
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "Terraform action"
+        type: choice
+        options: [plan, apply, destroy]
+        default: plan
+
+permissions:
+  contents: read
+  id-token: write
+  pull-requests: read
+
+env:
+  ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+  ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+  ARM_USE_OIDC: "true"
+  TF_VAR_subscription_id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+  TF_VAR_github_actions_principal_id: ${{ vars.GITHUB_SP_OBJECT_ID }}
+  TF_IN_AUTOMATION: "true"
+
+defaults:
+  run:
+    working-directory: infra/terraform
+
+jobs:
+  plan:
+    name: Terraform plan
+    if: github.event_name == 'pull_request' || inputs.action == 'plan' || inputs.action == ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.8
+      - run: terraform fmt -check -recursive
+      - name: terraform init (remote state)
+        run: |
+          terraform init -input=false \
+            -backend-config="resource_group_name=${{ vars.TFSTATE_RESOURCE_GROUP }}" \
+            -backend-config="storage_account_name=${{ vars.TFSTATE_STORAGE_ACCOUNT }}" \
+            -backend-config="container_name=tfstate" \
+            -backend-config="key=selfhealds.prod.tfstate" \
+            -backend-config="use_oidc=true"
+      - run: terraform validate
+      - name: terraform plan
+        run: |
+          terraform plan -input=false -no-color -out=tfplan | tee plan.txt
+          { echo "### Terraform plan"; echo '```'; tail -n 40 plan.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+  apply:
+    name: Terraform apply / destroy
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || inputs.action == 'apply' || inputs.action == 'destroy'
+    runs-on: ubuntu-latest
+    environment: infrastructure     # protection rule = manual approval before changing Azure
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.8
+      - name: terraform init (remote state)
+        run: |
+          terraform init -input=false \
+            -backend-config="resource_group_name=${{ vars.TFSTATE_RESOURCE_GROUP }}" \
+            -backend-config="storage_account_name=${{ vars.TFSTATE_STORAGE_ACCOUNT }}" \
+            -backend-config="container_name=tfstate" \
+            -backend-config="key=selfhealds.prod.tfstate" \
+            -backend-config="use_oidc=true"
+      - name: terraform apply
+        if: inputs.action != 'destroy'
+        run: terraform apply -input=false -auto-approve
+      - name: terraform destroy
+        if: inputs.action == 'destroy'
+        run: terraform destroy -input=false -auto-approve
+      - name: Outputs
+        if: inputs.action != 'destroy'
+        run: terraform output
