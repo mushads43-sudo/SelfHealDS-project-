@@ -1,0 +1,19 @@
+# Applied AFTER kube-prometheus-stack is installed (the CRDs must exist):
+#   kubectl apply -k k8s/monitoring
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: selfhealds
+
+resources:
+  - servicemonitor.yaml
+  - prometheusrule.yaml
+
+# Grafana's sidecar imports any ConfigMap labelled grafana_dashboard=1.
+configMapGenerator:
+  - name: selfhealds-grafana-dashboard
+    files:
+      - dashboards/selfhealds-overview.json
+    options:
+      disableNameSuffixHash: true
+      labels:
+        grafana_dashboard: "1"
