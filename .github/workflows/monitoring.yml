@@ -1,0 +1,39 @@
+# =============================================================================
+# SelfHealDS - install / upgrade the monitoring stack on AKS
+# kube-prometheus-stack (Prometheus Operator, Prometheus, Alertmanager,
+# Grafana, node-exporter, kube-state-metrics) + SelfHealDS ServiceMonitor,
+# PrometheusRule and Grafana dashboard.
+# =============================================================================
+name: Monitoring
+
+on:
+  push:
+    branches: [main]
+    paths: ["k8s/monitoring/**"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - uses: azure/setup-kubectl@v4
+      - uses: azure/setup-helm@v4
+      - uses: azure/aks-set-context@v4
+        with:
+          resource-group: ${{ vars.AKS_RESOURCE_GROUP }}
+          cluster-name: ${{ vars.AKS_CLUSTER_NAME }}
+      - name: Install kube-prometheus-stack + SelfHealDS monitoring
+        env:
+          GRAFANA_ADMIN_PASSWORD: ${{ secrets.GRAFANA_ADMIN_PASSWORD }}
+        run: bash scripts/install-monitoring.sh

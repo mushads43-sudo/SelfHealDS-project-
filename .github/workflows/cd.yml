@@ -1,0 +1,155 @@
+# =============================================================================
+# SelfHealDS - Continuous Delivery to Azure (ACR + AKS)
+#   push to main        -> CI -> image :sha-<short> + :latest -> deploy to AKS
+#   push tag vX.Y.Z     -> CI -> image :X.Y.Z, :X.Y, :sha-<short> -> deploy to AKS
+# Authentication: GitHub OIDC -> Azure AD app (no stored passwords).
+# Both jobs run in the "production" environment so the OIDC subject is always
+#   repo:<owner>/<repo>:environment:production
+# =============================================================================
+name: CD
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*.*.*"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  id-token: write          # required for azure/login OIDC
+
+concurrency:
+  group: cd-production
+  cancel-in-progress: false  # never cancel a deployment half-way
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
+
+  build-push:
+    name: Build and push image to ACR
+    needs: ci
+    runs-on: ubuntu-latest
+    environment: production
+    outputs:
+      image: ${{ steps.vars.outputs.image }}
+      version: ${{ steps.vars.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compute version and image reference
+        id: vars
+        run: |
+          SHORT_SHA="${GITHUB_SHA::7}"
+          if [[ "${GITHUB_REF}" == refs/tags/v* ]]; then VERSION="${GITHUB_REF_NAME#v}"; else VERSION="0.0.0-sha.${SHORT_SHA}"; fi
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "image=${{ vars.ACR_NAME }}.azurecr.io/selfhealds:sha-${SHORT_SHA}" >> "$GITHUB_OUTPUT"
+
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Log in to ACR
+        run: az acr login --name "${{ vars.ACR_NAME }}"
+
+      - name: Docker metadata (tags + OCI labels)
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ vars.ACR_NAME }}.azurecr.io/selfhealds
+          tags: |
+            type=sha,prefix=sha-,format=short
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - uses: docker/setup-buildx-action@v3
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            APP_VERSION=${{ steps.vars.outputs.version }}
+            GIT_SHA=${{ github.sha }}
+            BUILD_DATE=${{ github.event.head_commit.timestamp }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Summary
+        run: |
+          {
+            echo "### Image pushed"
+            echo '```'
+            echo "${{ steps.meta.outputs.tags }}"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    name: Deploy to AKS
+    needs: build-push
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: ${{ vars.APP_URL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - uses: azure/setup-kubectl@v4
+
+      - uses: azure/aks-set-context@v4
+        with:
+          resource-group: ${{ vars.AKS_RESOURCE_GROUP }}
+          cluster-name: ${{ vars.AKS_CLUSTER_NAME }}
+
+      - name: Pin the image tag (immutable sha tag, never :latest)
+        working-directory: k8s/base
+        run: |
+          kubectl kustomize . > /dev/null  # sanity check
+          curl -sSL "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv5.5.0/kustomize_v5.5.0_linux_amd64.tar.gz" | tar xz
+          ./kustomize edit set image "selfhealds=${{ needs.build-push.outputs.image }}"
+          rm kustomize
+          grep -A2 "images:" kustomization.yaml
+
+      - name: Apply manifests
+        run: kubectl apply -k k8s/base
+
+      - name: Wait for rollout
+        run: kubectl -n selfhealds rollout status deployment/selfhealds --timeout=300s
+
+      - name: Smoke test public endpoint
+        if: vars.APP_URL != ''
+        run: |
+          for i in $(seq 1 20); do
+            if curl -fsS "${{ vars.APP_URL }}/_stcore/health" | grep -q ok; then echo "Public endpoint healthy"; exit 0; fi
+            sleep 6
+          done
+          echo "Public endpoint did not become healthy" && exit 1
+
+      - name: Roll back on failure
+        if: failure()
+        run: |
+          kubectl -n selfhealds rollout undo deployment/selfhealds
+          kubectl -n selfhealds rollout status deployment/selfhealds --timeout=180s
+
+      - name: Deployment summary
+        if: always()
+        run: |
+          {
+            echo "### Deployment"
+            echo "- Image: \`${{ needs.build-push.outputs.image }}\`"
+            echo "- Version: \`${{ needs.build-push.outputs.version }}\`"
+            echo '```'
+            kubectl -n selfhealds get deploy,pods,svc,hpa -o wide
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

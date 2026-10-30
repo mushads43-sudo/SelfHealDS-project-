@@ -1,0 +1,161 @@
+# =============================================================================
+# SelfHealDS - Continuous Integration
+# Runs on every pull request and on pushes to develop/feature branches.
+# Also called by cd.yml (workflow_call) so main is never deployed untested.
+#   lint -> unit tests (3.11, 3.12) -> model quality gate
+#                                   -> docker build + container smoke test + scan
+#   iac-validate (K8s manifests, Terraform, Prometheus rules) runs in parallel
+# =============================================================================
+name: CI
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [develop, "feature/**", "fix/**"]
+  workflow_call: {}
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  lint:
+    name: Lint (ruff)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - run: pip install "ruff>=0.6,<1"
+      - run: ruff check . --output-format=github
+
+  test:
+    name: Unit tests (py${{ matrix.python }})
+    needs: lint
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-mlops.txt
+            requirements-dev.txt
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+      - name: Run pytest with coverage
+        run: |
+          pytest -q --junitxml=reports/junit.xml \
+                 --cov=backend --cov=monitoring --cov-report=xml:reports/coverage.xml --cov-report=term
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-reports-py${{ matrix.python }}
+          path: reports/
+
+  quality-gate:
+    name: Model quality gate
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - run: pip install -r requirements-dev.txt
+      - name: Controlled-corruption benchmark vs thresholds
+        run: python mlops/validate_model.py --report mlops/reports/quality_gate.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: quality-gate-report
+          path: mlops/reports/quality_gate.json
+
+  docker:
+    name: Docker build, smoke test and scan
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint Dockerfile (hadolint)
+        run: docker run --rm -i -v "$PWD/.hadolint.yaml:/.config/hadolint.yaml" hadolint/hadolint:v2.12.0 < Dockerfile
+      - uses: docker/setup-buildx-action@v3
+      - name: Build image (not pushed)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          load: true
+          tags: selfhealds:ci
+          build-args: |
+            APP_VERSION=ci
+            GIT_SHA=${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Run container exactly like Kubernetes (read-only, non-root)
+        run: |
+          docker run -d --name shd --read-only --tmpfs /tmp \
+            --tmpfs /home/app:uid=10001,gid=10001 -p 8501:8501 -p 8000:8000 selfhealds:ci
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:8501/_stcore/health | grep -q ok; then echo "healthy after ${i}x2s"; break; fi
+            sleep 2
+          done
+      - name: Smoke test health + metrics
+        run: |
+          curl -fsS http://localhost:8501/_stcore/health
+          curl -fsS http://localhost:8000/metrics | grep selfhealds_build_info
+          test "$(docker inspect -f '{{.Config.User}}' selfhealds:ci)" = "10001"
+      - name: Container logs on failure
+        if: failure()
+        run: docker logs shd
+      - name: Vulnerability scan (Trivy, report only)
+        run: |
+          docker run --rm -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy:0.57.1 \
+            image --severity HIGH,CRITICAL --ignore-unfixed --exit-code 0 --no-progress selfhealds:ci
+
+  iac-validate:
+    name: Validate K8s, Terraform, Prometheus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install kubeconform
+        run: |
+          curl -sSL https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz | tar xz
+          sudo mv kubeconform /usr/local/bin/
+      - name: Validate Kubernetes manifests (rendered by kustomize)
+        run: |
+          kubectl kustomize k8s/base | kubeconform -strict -summary -kubernetes-version 1.30.0
+          kubectl kustomize k8s/monitoring | kubeconform -strict -summary -kubernetes-version 1.30.0 \
+            -schema-location default \
+            -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json'
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.8
+      - name: Terraform fmt + validate (no backend, no credentials)
+        working-directory: infra/terraform
+        run: |
+          terraform fmt -check -recursive
+          terraform init -backend=false -input=false
+          terraform validate
+      - name: Prometheus rules + dashboard JSON
+        run: |
+          # Mounted at /etc/prometheus so the rule_files path in prometheus.yml resolves (also checks alerts.yml)
+          docker run --rm -v "$PWD/observability/prometheus:/etc/prometheus:ro" --entrypoint promtool \
+            prom/prometheus:v2.55.1 check config /etc/prometheus/prometheus.yml
+          python3 -c "import json;d=json.load(open('k8s/monitoring/dashboards/selfhealds-overview.json'));print(d['title'],len(d['panels']),'panels')"
