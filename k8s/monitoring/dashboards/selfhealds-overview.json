@@ -190,7 +190,7 @@
             "uid": "${datasource}"
           },
           "refId": "A",
-          "expr": "sum(increase(kube_pod_container_status_restarts_total{namespace=\"selfhealds\",container=\"selfhealds\"}[1h]))",
+          "expr": "sum(increase(kube_pod_container_status_restarts_total{namespace=\"selfhealds\",container=\"selfhealds\"}[1h])) or vector(0)",
           "legendFormat": "restarts",
           "instant": true
         }
@@ -556,7 +556,7 @@
             "uid": "${datasource}"
           },
           "refId": "A",
-          "expr": "sum(increase(selfhealds_pipeline_runs_total{job=~\"$job\",status=\"error\"}[24h]))",
+          "expr": "sum(increase(selfhealds_pipeline_runs_total{job=~\"$job\",status=\"error\"}[24h])) or vector(0)",
           "legendFormat": "errors",
           "instant": true
         }
