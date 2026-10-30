@@ -1,0 +1,19 @@
+# Production Streamlit settings for SelfHealDS (container / Kubernetes).
+[server]
+headless = true
+port = 8501
+address = "0.0.0.0"
+# Matches the "Maximum supported file size: 50 MB" text on the upload page.
+maxUploadSize = 50
+# File watching is pointless (and costs CPU) inside an immutable container.
+fileWatcherType = "none"
+runOnSave = false
+
+[browser]
+gatherUsageStats = false
+
+[logger]
+level = "info"
+
+[client]
+showErrorDetails = false
