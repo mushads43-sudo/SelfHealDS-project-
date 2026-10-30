@@ -35,7 +35,7 @@ jobs:
       image: ${{ steps.vars.outputs.image }}
       version: ${{ steps.vars.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Compute version and image reference
         id: vars
@@ -97,7 +97,7 @@ jobs:
       name: production
       url: ${{ vars.APP_URL }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: azure/login@v2
         with:

@@ -31,7 +31,7 @@ jobs:
     name: Lint (ruff)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
@@ -47,7 +47,7 @@ jobs:
       matrix:
         python: ["3.11", "3.12"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
@@ -73,7 +73,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
@@ -93,7 +93,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Lint Dockerfile (hadolint)
         run: docker run --rm -i -v "$PWD/.hadolint.yaml:/.config/hadolint.yaml" hadolint/hadolint:v2.12.0 < Dockerfile
       - uses: docker/setup-buildx-action@v3
@@ -133,7 +133,7 @@ jobs:
     name: Validate K8s, Terraform, Prometheus
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install kubeconform
         run: |
           curl -sSL https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz | tar xz
