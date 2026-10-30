@@ -1,0 +1,9 @@
+# Copy to terraform.tfvars (git-ignored) and fill in.
+subscription_id             = "00000000-0000-0000-0000-000000000000"
+project                     = "selfhealds"
+environment                 = "prod"
+location                    = "centralindia"
+node_vm_size                = "Standard_B2s"
+node_min_count              = 1
+node_max_count              = 2
+github_actions_principal_id = "" # object id printed by scripts/setup-github-oidc.sh

@@ -1,0 +1,3 @@
+# Runtime additions for the MLOps layer (monitoring). The original
+# requirements.txt is unchanged; the Docker image installs both.
+prometheus-client>=0.21,<1

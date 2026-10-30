@@ -1,0 +1,6 @@
+# hadolint config for SelfHealDS
+# DL3006: the base image IS pinned (python:3.12-slim) via ARG BASE_IMAGE;
+# hadolint cannot resolve ARG defaults, so the rule is a false positive here.
+ignored:
+  - DL3006
+failure-threshold: warning

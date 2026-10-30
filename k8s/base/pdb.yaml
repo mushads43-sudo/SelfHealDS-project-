@@ -1,0 +1,11 @@
+# Keeps at least one SelfHealDS pod running during node upgrades/drains.
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: selfhealds
+  namespace: selfhealds
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: selfhealds

@@ -1,0 +1,35 @@
+# SelfHealDS model / rule-engine quality gate.
+# Executed by `python mlops/validate_model.py` in CI before any image is built.
+#
+# Reference run (adult_1000.csv, seed 42, 10% controlled corruption,
+# ruleset 2026.08-research-v2, evaluation 2026.08-eval-v3):
+#   precision 100.0 | recall 44.0 | F1 61.11 | repair accuracy 100.0
+#   unsafe-repair rate 0.0 | clean false-positive rate 0.0
+# Thresholds sit slightly below the reference so legitimate rule tuning is
+# allowed, while any regression in the do-no-harm guarantees fails the build.
+
+[benchmark]
+dataset = "data/real_world/adult_1000.csv"
+corruption_rate = 0.10
+seeds = [42, 43, 44]
+
+[thresholds]
+min_precision_pct = 95.0
+min_recall_pct = 40.0
+min_f1_pct = 55.0
+min_repair_accuracy_pct = 95.0
+max_unsafe_repair_rate_pct = 0.0          # SelfHealDS must never make an unsafe automatic repair
+max_clean_false_positive_rate_pct = 1.0
+max_mean_runtime_seconds = 60.0
+
+[smoke]
+# Every bundled sample must run end-to-end (assess -> heal) without error.
+# The post-repair validation gate's failed-repair count per dataset may not
+# exceed the recorded baseline. Baseline: 05_health_measurements_messy.csv has
+# one by design - the placeholder 'unknown' in blood_pressure is canonicalised
+# to missing, too few observations exist to impute, so the validation gate
+# keeps it as an Error and quarantines the row (the do-no-harm path).
+sample_dir = "sample messy datasets"
+
+[smoke.baseline_failed_repairs]
+"05_health_measurements_messy.csv" = 1

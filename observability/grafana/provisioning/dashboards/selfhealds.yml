@@ -1,0 +1,9 @@
+apiVersion: 1
+providers:
+  - name: SelfHealDS
+    folder: SelfHealDS
+    type: file
+    disableDeletion: false
+    options:
+      # Same JSON file that Kubernetes ships as a ConfigMap (single source of truth)
+      path: /var/lib/grafana/dashboards

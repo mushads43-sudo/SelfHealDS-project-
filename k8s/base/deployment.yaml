@@ -1,0 +1,109 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: selfhealds
+  namespace: selfhealds
+  labels:
+    app.kubernetes.io/name: selfhealds
+    app.kubernetes.io/component: web
+spec:
+  replicas: 2                      # HPA takes over after first apply (min 2, max 4)
+  revisionHistoryLimit: 5          # enables `kubectl rollout undo`
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: selfhealds
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0            # zero-downtime: a new pod must be Ready before an old one stops
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: selfhealds
+        app.kubernetes.io/component: web
+      annotations:
+        # Fallback discovery for plain Prometheus setups (the Operator uses the ServiceMonitor).
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: "/metrics"
+    spec:
+      terminationGracePeriodSeconds: 30
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001             # makes the emptyDir volumes writable for UID 10001
+        seccompProfile:
+          type: RuntimeDefault
+      topologySpreadConstraints:   # spread replicas across nodes when more than one exists
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/name: selfhealds
+      containers:
+        - name: selfhealds
+          image: selfhealds        # rewritten by kustomize to <acr>.azurecr.io/selfhealds:<tag>
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8501
+            - name: metrics
+              containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: selfhealds-config
+          env:
+            # Optional: only used by the isolated E10 LLM-baseline research feature.
+            - name: ANTHROPIC_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: selfhealds-secrets
+                  key: ANTHROPIC_API_KEY
+                  optional: true
+          resources:
+            requests:
+              cpu: 250m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1536Mi       # Research Evaluation (corruption sweep) is the memory peak
+          startupProbe:            # Streamlit + pandas/sklearn import takes ~5-15 s
+            httpGet:
+              path: /_stcore/health
+              port: http
+            periodSeconds: 5
+            failureThreshold: 24   # up to 120 s
+          readinessProbe:
+            httpGet:
+              path: /_stcore/health
+              port: http
+            periodSeconds: 10
+            timeoutSeconds: 3
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /_stcore/health
+              port: http
+            periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 3
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+            - name: home
+              mountPath: /home/app   # Streamlit reads ~/.streamlit; must be writable by UID 10001
+      volumes:
+        - name: tmp
+          emptyDir:
+            sizeLimit: 256Mi
+        - name: home
+          emptyDir:
+            sizeLimit: 64Mi

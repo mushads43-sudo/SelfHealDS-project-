@@ -1,0 +1,102 @@
+# SelfHealDS alerting rules (Prometheus Operator CRD).
+# Groups: service health, application performance, model/data quality,
+# Kubernetes resources. The app-level groups mirror
+# observability/prometheus/alerts.yml (used by the local docker-compose stack).
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: selfhealds-alerts
+  namespace: selfhealds
+  labels:
+    app.kubernetes.io/name: selfhealds
+spec:
+  groups:
+    - name: selfhealds.service-health
+      rules:
+        - alert: SelfHealDSTargetDown
+          expr: up{job="selfhealds-metrics"} == 0
+          for: 2m
+          labels: { severity: critical }
+          annotations:
+            summary: "SelfHealDS pod {{ $labels.pod }} is not exposing metrics"
+            description: "Prometheus cannot scrape /metrics on {{ $labels.pod }} for 2 minutes. Check `kubectl -n selfhealds get pods` and pod logs."
+        - alert: SelfHealDSNoReplicasAvailable
+          expr: kube_deployment_status_replicas_available{namespace="selfhealds",deployment="selfhealds"} == 0
+          for: 1m
+          labels: { severity: critical }
+          annotations:
+            summary: "SelfHealDS has zero available replicas - the application is down"
+        - alert: SelfHealDSReplicasMismatch
+          expr: |
+            kube_deployment_spec_replicas{namespace="selfhealds",deployment="selfhealds"}
+              != kube_deployment_status_replicas_available{namespace="selfhealds",deployment="selfhealds"}
+          for: 10m
+          labels: { severity: warning }
+          annotations:
+            summary: "SelfHealDS desired vs available replicas differ for 10 minutes (rollout stuck or pods Pending)"
+        - alert: SelfHealDSPodRestarting
+          expr: increase(kube_pod_container_status_restarts_total{namespace="selfhealds",container="selfhealds"}[15m]) > 2
+          labels: { severity: warning }
+          annotations:
+            summary: "SelfHealDS container in {{ $labels.pod }} restarted more than twice in 15 minutes"
+            description: "Usually OOMKilled during Research Evaluation on large files, or a failing liveness probe. Run `kubectl -n selfhealds describe pod {{ $labels.pod }}`."
+
+    - name: selfhealds.application-performance
+      rules:
+        - record: selfhealds:pipeline_duration_seconds:p95
+          expr: histogram_quantile(0.95, sum by (le, stage) (rate(selfhealds_pipeline_duration_seconds_bucket[5m])))
+        - alert: SelfHealDSSlowAssessOrHeal
+          expr: selfhealds:pipeline_duration_seconds:p95{stage=~"assess|heal"} > 10
+          for: 10m
+          labels: { severity: warning }
+          annotations:
+            summary: "p95 {{ $labels.stage }} latency is {{ $value | humanizeDuration }} (threshold 10s)"
+        - alert: SelfHealDSPipelineErrors
+          expr: sum by (stage) (increase(selfhealds_pipeline_runs_total{status="error"}[10m])) > 0
+          labels: { severity: warning }
+          annotations:
+            summary: "SelfHealDS {{ $labels.stage }} raised an exception in the last 10 minutes"
+            description: "An uploaded file caused an unhandled error in backend.{{ $labels.stage }}. Check pod logs for the traceback."
+
+    - name: selfhealds.model-quality
+      rules:
+        - alert: SelfHealDSRepairValidationFailureRateHigh
+          # Share of automatic repairs that the post-repair validation gate rejected.
+          expr: |
+            sum(increase(selfhealds_repair_validation_total{result="FAILED"}[1h]))
+              / clamp_min(sum(increase(selfhealds_repair_validation_total[1h])), 1) > 0.2
+          for: 15m
+          labels: { severity: warning }
+          annotations:
+            summary: "More than 20% of automatic repairs failed post-repair validation in the last hour"
+            description: "The safety gate is catching repairs (rows are quarantined, not exported). Investigate the datasets being uploaded or recent rule changes."
+        - alert: SelfHealDSResearchUnsafeRepairs
+          expr: selfhealds_research_metric{metric="unsafe_repair_rate"} > 0
+          labels: { severity: critical }
+          annotations:
+            summary: "Research Evaluation reported a non-zero unsafe-repair rate ({{ $value }}%)"
+            description: "SelfHealDS's do-no-harm guarantee was violated on the controlled-corruption benchmark. Block releases until investigated."
+        - alert: SelfHealDSResearchF1Low
+          expr: selfhealds_research_metric{metric="f1"} < 55
+          labels: { severity: warning }
+          annotations:
+            summary: "Research Evaluation F1 {{ $value }}% is below the CI gate threshold (55%)"
+
+    - name: selfhealds.resources
+      rules:
+        - alert: SelfHealDSMemoryNearLimit
+          expr: |
+            max by (pod) (container_memory_working_set_bytes{namespace="selfhealds",container="selfhealds"})
+              / max by (pod) (kube_pod_container_resource_limits{namespace="selfhealds",container="selfhealds",resource="memory"}) > 0.85
+          for: 5m
+          labels: { severity: warning }
+          annotations:
+            summary: "{{ $labels.pod }} is using more than 85% of its memory limit"
+        - alert: SelfHealDSHPAAtMaximum
+          expr: |
+            kube_horizontalpodautoscaler_status_current_replicas{namespace="selfhealds"}
+              >= kube_horizontalpodautoscaler_spec_max_replicas{namespace="selfhealds"}
+          for: 15m
+          labels: { severity: info }
+          annotations:
+            summary: "SelfHealDS autoscaler has been at maxReplicas for 15 minutes - consider a larger node pool"

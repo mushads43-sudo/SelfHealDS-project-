@@ -1,0 +1,44 @@
+# Keep the runtime image small: only the app, backend, bundled data and
+# entrypoints are needed at run time. Research paper assets stay in Git.
+.git
+.github
+.gitignore
+.dockerignore
+**/__pycache__
+**/*.pyc
+.pytest_cache
+.ruff_cache
+.venv
+venv
+.DS_Store
+__MACOSX
+
+# Not needed by the running Streamlit app
+paper/
+figures/
+tables/
+research_outputs/
+tests/
+mlops/
+infra/
+k8s/
+observability/
+scripts/
+docs/
+*.md
+!README.md
+Makefile
+docker-compose.yml
+requirements-dev.txt
+
+# E10 LLM-baseline experiment artefacts (offline research inputs only)
+*_messy.csv
+*_reply.csv
+*.prompt.txt
+run_llm_baseline.py
+build_tables.py
+scripts_run_benchmark.py
+
+# Secrets
+.env
+.streamlit/secrets.toml

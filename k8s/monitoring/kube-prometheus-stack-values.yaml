@@ -1,0 +1,89 @@
+# Helm values for prometheus-community/kube-prometheus-stack on a small AKS
+# cluster (student budget). Installed by scripts/install-monitoring.sh:
+#   helm upgrade --install monitoring prometheus-community/kube-prometheus-stack \
+#     -n monitoring --create-namespace -f k8s/monitoring/kube-prometheus-stack-values.yaml
+
+# AKS runs a managed control plane: these components are not scrapeable and
+# would only produce permanent "target down" alerts.
+kubeEtcd:
+  enabled: false
+kubeControllerManager:
+  enabled: false
+kubeScheduler:
+  enabled: false
+kubeProxy:
+  enabled: false
+
+prometheus:
+  prometheusSpec:
+    # Pick up the SelfHealDS ServiceMonitor/PrometheusRule from any namespace
+    # without requiring the Helm release label on them.
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false
+    retention: 7d
+    scrapeInterval: 30s
+    resources:
+      requests: { cpu: 100m, memory: 400Mi }
+      limits: { memory: 1Gi }
+    # emptyDir storage keeps cost at zero; metrics reset if the pod moves.
+    # For persistence, uncomment (Azure managed disk, about USD 1/month for 8 GiB):
+    # storageSpec:
+    #   volumeClaimTemplate:
+    #     spec:
+    #       storageClassName: managed-csi
+    #       accessModes: ["ReadWriteOnce"]
+    #       resources: { requests: { storage: 8Gi } }
+
+alertmanager:
+  alertmanagerSpec:
+    resources:
+      requests: { cpu: 10m, memory: 32Mi }
+      limits: { memory: 128Mi }
+  # Replace the null receiver with e-mail / Slack / MS Teams webhook as needed.
+  config:
+    route:
+      receiver: "null"
+      group_by: ["alertname", "namespace"]
+      routes:
+        - receiver: "null"
+          matchers: ['alertname = "Watchdog"']
+    receivers:
+      - name: "null"
+    # Example (Slack):
+    # receivers:
+    #   - name: slack
+    #     slack_configs:
+    #       - api_url: https://hooks.slack.com/services/XXX/YYY/ZZZ
+    #         channel: "#selfhealds-alerts"
+    #         send_resolved: true
+
+grafana:
+  # Set at install time: --set grafana.adminPassword="$GRAFANA_ADMIN_PASSWORD"
+  service:
+    type: ClusterIP            # access with: kubectl -n monitoring port-forward svc/monitoring-grafana 3000:80
+  resources:
+    requests: { cpu: 50m, memory: 128Mi }
+    limits: { memory: 384Mi }
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+      labelValue: "1"
+      searchNamespace: ALL     # load the SelfHealDS dashboard ConfigMap from the selfhealds namespace
+  defaultDashboardsTimezone: Asia/Kolkata
+
+kube-state-metrics:
+  resources:
+    requests: { cpu: 10m, memory: 64Mi }
+    limits: { memory: 192Mi }
+
+prometheus-node-exporter:
+  resources:
+    requests: { cpu: 10m, memory: 32Mi }
+    limits: { memory: 64Mi }
+
+prometheusOperator:
+  resources:
+    requests: { cpu: 50m, memory: 64Mi }
+    limits: { memory: 256Mi }

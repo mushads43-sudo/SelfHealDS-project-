@@ -1,0 +1,47 @@
+# Public entry point: Azure Load Balancer -> pods on 8501.
+# sessionAffinity is REQUIRED for SelfHealDS: each browser session keeps its
+# uploaded DataFrame, assessment and healing results in Streamlit's in-memory
+# st.session_state on ONE pod. Without stickiness a websocket reconnect could
+# land on another replica and the user would lose their loaded dataset.
+apiVersion: v1
+kind: Service
+metadata:
+  name: selfhealds
+  namespace: selfhealds
+  labels:
+    app.kubernetes.io/name: selfhealds
+  annotations:
+    # Gives a free DNS name: http://<label>.<region>.cloudapp.azure.com
+    # The label must be unique within the Azure region - change it.
+    service.beta.kubernetes.io/azure-dns-label-name: selfhealds-j059
+spec:
+  type: LoadBalancer
+  selector:
+    app.kubernetes.io/name: selfhealds
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10800        # 3 h research session
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+---
+# Internal-only service so Prometheus can scrape /metrics. Port 8000 is never
+# exposed through the public load balancer.
+apiVersion: v1
+kind: Service
+metadata:
+  name: selfhealds-metrics
+  namespace: selfhealds
+  labels:
+    app.kubernetes.io/name: selfhealds
+    app.kubernetes.io/component: metrics
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: selfhealds
+  ports:
+    - name: metrics
+      port: 8000
+      targetPort: metrics
