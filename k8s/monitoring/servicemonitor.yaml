@@ -1,0 +1,21 @@
+# Tells the Prometheus Operator to scrape every SelfHealDS pod behind the
+# internal selfhealds-metrics Service.
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: selfhealds
+  namespace: selfhealds
+  labels:
+    app.kubernetes.io/name: selfhealds
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: selfhealds
+      app.kubernetes.io/component: metrics
+  namespaceSelector:
+    matchNames: ["selfhealds"]
+  endpoints:
+    - port: metrics
+      path: /metrics
+      interval: 15s
+      scrapeTimeout: 10s
