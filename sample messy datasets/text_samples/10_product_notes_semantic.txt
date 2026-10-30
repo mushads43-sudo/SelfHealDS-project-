@@ -1,0 +1,6 @@
+Order O501 | status: Completed | city: Seattle, state: Washington, country: United States
+Order O501 | status: Completed
+Order O501 | status: complete
+Order O777 | status: Pending | city: Austin, state: Massachusetts, country: United States
+The product is availble in a seperate warehouse.
+Support: service at shop dot com

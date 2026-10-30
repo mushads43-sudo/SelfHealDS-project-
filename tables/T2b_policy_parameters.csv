@@ -1,0 +1,10 @@
+Policy parameter,Value,Rationale
+age_upper_bound,120.0,"A conservative domain boundary for ordinary human-age fields. It is a validation policy, not a claim about every possible age-related dataset."
+phone_min_digits,7.0,"A broad generic international identifier range. Because country-specific numbering plans differ, this is a structural plausibility check rather than proof that a number is assigned."
+phone_max_digits,15.0,"A broad generic international identifier range. Because country-specific numbering plans differ, this is a structural plausibility check rather than proof that a number is assigned."
+missing_max_rate,0.2,"Automatic imputation is limited to at most one-fifth missingness. Above this level, the observed sample may be too incomplete for a simple single-value fallback to be defensible without domain context."
+missing_min_observed,5.0,"At least five observed values are required before a single-value fallback is used. This is a conservative minimum for a small-sample engineering rule, not a statistical guarantee."
+outlier_iqr_multiplier,1.5,The conventional 1.5×IQR exploratory fence is used to flag unusual values. It identifies potential outliers; it does not establish that a value is erroneous.
+quality_error_weight,1.0,"The quality score is an internal comparison indicator. Errors receive full penalty, warnings 0.35 and informational findings 0.10 to preserve severity ordering. These weights are not learned and are not an industry standard."
+quality_warning_weight,0.35,"The quality score is an internal comparison indicator. Errors receive full penalty, warnings 0.35 and informational findings 0.10 to preserve severity ordering. These weights are not learned and are not an industry standard."
+quality_info_weight,0.1,"The quality score is an internal comparison indicator. Errors receive full penalty, warnings 0.35 and informational findings 0.10 to preserve severity ordering. These weights are not learned and are not an industry standard."

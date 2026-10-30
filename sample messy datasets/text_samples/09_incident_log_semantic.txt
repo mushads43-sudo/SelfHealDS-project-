@@ -1,0 +1,6 @@
+Ticket T-900 | status: Closed | priority: High | resolution: unknown | city: Chicago, state: Texas, country: United States
+Ticket T-900 | status: Closed | priority: High | resolution: Service Restored
+Ticket T-900 | status: Open | priority: High | resolution: Service Restored
+The outage occured after the configuration change.
+The outage occured after the configuration change.
+Owner email: ops (at) company (dot) com

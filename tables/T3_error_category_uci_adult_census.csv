@@ -1,0 +1,3 @@
+Issue type,Difficulty,Injected,Detected,Recall (%)
+Negative age,obvious,295,295,100.0
+Plausible age corruption,plausible,305,0,0.0

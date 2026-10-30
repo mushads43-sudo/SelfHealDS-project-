@@ -1,0 +1,4 @@
+Dataset,Model,Rows sent to LLM,SelfHealDS repair accuracy (%),LLM repair accuracy (%),SelfHealDS unsafe-repair rate (%),LLM unsafe-repair rate (%),LLM collateral changes,Domain-trap violations,manifest
+case:holoclean_flights,claude.ai free tier,300,,41.94,,58.06,8,,llm_baseline_case_holoclean_flights_20260901T102839Z.json
+case:holoclean_hospital,claude.ai free tier,183,,56.76,,43.24,18,,llm_baseline_case_holoclean_hospital_20260901T101719Z.json
+case:uci_online_retail,claude.ai free tier,300,95.8,100.0,4.2,0.0,3,33.0,llm_baseline_case_uci_online_retail_20260901T103543Z.json

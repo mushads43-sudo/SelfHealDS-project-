@@ -1,0 +1,2023 @@
+{
+  "generated_at": "2026-09-01T10:28:39.706327+00:00",
+  "experiment": "E10 \u2014 LLM baseline comparison",
+  "llm_eval_version": "2026.09-llm-baseline-v1",
+  "selfhealds_eval_version": "2026.08-eval-v3",
+  "reference_label": "case:holoclean_flights",
+  "reference_fingerprint": "ec406d00ec727f91",
+  "corruption_rate": 0.1,
+  "seed": 42,
+  "injected_cases": 161,
+  "row_cap": 300,
+  "row_cap_applied": true,
+  "rows_sent_to_llm": 300,
+  "model": "claude.ai free tier",
+  "selfhealds_evaluation": {
+    "generated_at": "2026-09-01T10:28:39.686681+00:00",
+    "evaluation_version": "2026.08-eval-v3",
+    "dataset_fingerprint": "ec406d00ec727f91",
+    "benchmark_reference_fingerprint": "ec406d00ec727f91",
+    "reference_mode": "uploaded_reference_no_preclean",
+    "preexisting_rows_excluded": 0,
+    "corruption_rate": 0.1,
+    "seed": 42,
+    "actual_corruption_cases": 161,
+    "obvious_cases": 76,
+    "plausible_cases": 85,
+    "ground_truth": [
+      {
+        "row": 431,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-13",
+        "corrupted_value": "2017-01-14",
+        "expected_repair": "2017-01-13"
+      },
+      {
+        "row": 309,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-11-03",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-11-03"
+      },
+      {
+        "row": 317,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-07-11",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-07-11"
+      },
+      {
+        "row": 55,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-01",
+        "corrupted_value": "2017-09-02",
+        "expected_repair": "2017-09-01"
+      },
+      {
+        "row": 258,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-08-08",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-08-08"
+      },
+      {
+        "row": 442,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-12-24",
+        "corrupted_value": "2017-12-25",
+        "expected_repair": "2017-12-24"
+      },
+      {
+        "row": 209,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-07-15",
+        "corrupted_value": "2017-07-16",
+        "expected_repair": "2017-07-15"
+      },
+      {
+        "row": 85,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-03-03",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-03-03"
+      },
+      {
+        "row": 491,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-17",
+        "corrupted_value": "2017-01-18",
+        "expected_repair": "2017-01-17"
+      },
+      {
+        "row": 704,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-10-06",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-10-06"
+      },
+      {
+        "row": 193,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-03-27",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-03-27"
+      },
+      {
+        "row": 261,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-11-11",
+        "corrupted_value": "2017-11-12",
+        "expected_repair": "2017-11-11"
+      },
+      {
+        "row": 428,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-10-10",
+        "corrupted_value": "2017-10-11",
+        "expected_repair": "2017-10-10"
+      },
+      {
+        "row": 709,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-03-11",
+        "corrupted_value": "2017-03-12",
+        "expected_repair": "2017-03-11"
+      },
+      {
+        "row": 277,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-03-27",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-03-27"
+      },
+      {
+        "row": 683,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-13",
+        "corrupted_value": "2017-01-14",
+        "expected_repair": "2017-01-13"
+      },
+      {
+        "row": 91,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-09-09",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-09-09"
+      },
+      {
+        "row": 508,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-06-06",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-06-06"
+      },
+      {
+        "row": 148,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-06-10",
+        "corrupted_value": "2017-06-11",
+        "expected_repair": "2017-06-10"
+      },
+      {
+        "row": 522,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-08-20",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-08-20"
+      },
+      {
+        "row": 188,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-10-22",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-10-22"
+      },
+      {
+        "row": 68,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-10-14",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-10-14"
+      },
+      {
+        "row": 439,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-09-21",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-09-21"
+      },
+      {
+        "row": 405,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-11-15",
+        "corrupted_value": "2017-11-16",
+        "expected_repair": "2017-11-15"
+      },
+      {
+        "row": 266,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-04-16",
+        "corrupted_value": "2017-04-17",
+        "expected_repair": "2017-04-16"
+      },
+      {
+        "row": 657,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-11-15",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-11-15"
+      },
+      {
+        "row": 171,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-05-05",
+        "corrupted_value": "2017-05-06",
+        "expected_repair": "2017-05-05"
+      },
+      {
+        "row": 49,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-03-23",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-03-23"
+      },
+      {
+        "row": 496,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-06-22",
+        "corrupted_value": "2017-06-23",
+        "expected_repair": "2017-06-22"
+      },
+      {
+        "row": 345,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-11-11",
+        "corrupted_value": "2017-11-12",
+        "expected_repair": "2017-11-11"
+      },
+      {
+        "row": 191,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-25",
+        "corrupted_value": "2017-01-26",
+        "expected_repair": "2017-01-25"
+      },
+      {
+        "row": 365,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-07-03",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-07-03"
+      },
+      {
+        "row": 28,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-06-02",
+        "corrupted_value": "2017-06-03",
+        "expected_repair": "2017-06-02"
+      },
+      {
+        "row": 626,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-12",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-12"
+      },
+      {
+        "row": 34,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-12-08",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-12-08"
+      },
+      {
+        "row": 620,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-10-06",
+        "corrupted_value": "2017-10-07",
+        "expected_repair": "2017-10-06"
+      },
+      {
+        "row": 341,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-07-07",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-07-07"
+      },
+      {
+        "row": 581,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-07-23",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-07-23"
+      },
+      {
+        "row": 189,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-11-23",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-11-23"
+      },
+      {
+        "row": 692,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-10-22",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-10-22"
+      },
+      {
+        "row": 330,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-08-24",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-08-24"
+      },
+      {
+        "row": 302,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-24",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-24"
+      },
+      {
+        "row": 498,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-08-24",
+        "corrupted_value": "2017-08-25",
+        "expected_repair": "2017-08-24"
+      },
+      {
+        "row": 314,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-08",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-08"
+      },
+      {
+        "row": 571,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-13",
+        "corrupted_value": "2017-09-14",
+        "expected_repair": "2017-09-13"
+      },
+      {
+        "row": 641,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-07-27",
+        "corrupted_value": "2017-07-28",
+        "expected_repair": "2017-07-27"
+      },
+      {
+        "row": 313,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-03-07",
+        "corrupted_value": "2017-03-08",
+        "expected_repair": "2017-03-07"
+      },
+      {
+        "row": 106,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-12-24",
+        "corrupted_value": "2017-12-25",
+        "expected_repair": "2017-12-24"
+      },
+      {
+        "row": 186,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-08-20",
+        "corrupted_value": "2017-08-21",
+        "expected_repair": "2017-08-20"
+      },
+      {
+        "row": 722,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-24",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-24"
+      },
+      {
+        "row": 63,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-05-09",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-05-09"
+      },
+      {
+        "row": 622,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-12-08",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-12-08"
+      },
+      {
+        "row": 319,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-13",
+        "corrupted_value": "2017-09-14",
+        "expected_repair": "2017-09-13"
+      },
+      {
+        "row": 211,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-09-17",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-09-17"
+      },
+      {
+        "row": 461,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-07-15",
+        "corrupted_value": "2017-07-16",
+        "expected_repair": "2017-07-15"
+      },
+      {
+        "row": 50,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-24",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-24"
+      },
+      {
+        "row": 694,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-12-24",
+        "corrupted_value": "2017-12-25",
+        "expected_repair": "2017-12-24"
+      },
+      {
+        "row": 4,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-06-06",
+        "corrupted_value": "2017-06-07",
+        "expected_repair": "2017-06-06"
+      },
+      {
+        "row": 381,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-11-19",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-11-19"
+      },
+      {
+        "row": 674,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-04",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-04"
+      },
+      {
+        "row": 185,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-07-19",
+        "corrupted_value": "2017-07-20",
+        "expected_repair": "2017-07-19"
+      },
+      {
+        "row": 446,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-28",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-28"
+      },
+      {
+        "row": 693,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-11-23",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-11-23"
+      },
+      {
+        "row": 706,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-12-08",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-12-08"
+      },
+      {
+        "row": 600,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-02-14",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-02-14"
+      },
+      {
+        "row": 132,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-02-22",
+        "corrupted_value": "2017-02-23",
+        "expected_repair": "2017-02-22"
+      },
+      {
+        "row": 533,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-07-03",
+        "corrupted_value": "2017-07-04",
+        "expected_repair": "2017-07-03"
+      },
+      {
+        "row": 17,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-07-19",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-07-19"
+      },
+      {
+        "row": 282,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-08-04",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-08-04"
+      },
+      {
+        "row": 644,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-10-02",
+        "corrupted_value": "2017-10-03",
+        "expected_repair": "2017-10-02"
+      },
+      {
+        "row": 334,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-12-28",
+        "corrupted_value": "2017-12-29",
+        "expected_repair": "2017-12-28"
+      },
+      {
+        "row": 589,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-03-03",
+        "corrupted_value": "2017-03-04",
+        "expected_repair": "2017-03-03"
+      },
+      {
+        "row": 717,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-11-19",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-11-19"
+      },
+      {
+        "row": 417,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-11-27",
+        "corrupted_value": "2017-11-28",
+        "expected_repair": "2017-11-27"
+      },
+      {
+        "row": 384,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-02-22",
+        "corrupted_value": "2017-02-23",
+        "expected_repair": "2017-02-22"
+      },
+      {
+        "row": 419,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-01",
+        "corrupted_value": "2017-01-02",
+        "expected_repair": "2017-01-01"
+      },
+      {
+        "row": 555,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-05-25",
+        "corrupted_value": "2017-05-26",
+        "expected_repair": "2017-05-25"
+      },
+      {
+        "row": 404,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-10-14",
+        "corrupted_value": "2017-10-15",
+        "expected_repair": "2017-10-14"
+      },
+      {
+        "row": 625,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-03-11",
+        "corrupted_value": "2017-03-12",
+        "expected_repair": "2017-03-11"
+      },
+      {
+        "row": 584,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-10-26",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-10-26"
+      },
+      {
+        "row": 590,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-04-04",
+        "corrupted_value": "2017-04-05",
+        "expected_repair": "2017-04-04"
+      },
+      {
+        "row": 796,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-06-14",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-06-14"
+      },
+      {
+        "row": 355,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-21",
+        "corrupted_value": "2017-09-22",
+        "expected_repair": "2017-09-21"
+      },
+      {
+        "row": 103,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-21",
+        "corrupted_value": "2017-09-22",
+        "expected_repair": "2017-09-21"
+      },
+      {
+        "row": 542,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-04-12",
+        "corrupted_value": "2017-04-13",
+        "expected_repair": "2017-04-12"
+      },
+      {
+        "row": 92,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-10-10",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-10-10"
+      },
+      {
+        "row": 358,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-12-24",
+        "corrupted_value": "2017-12-25",
+        "expected_repair": "2017-12-24"
+      },
+      {
+        "row": 707,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-01-09",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-01-09"
+      },
+      {
+        "row": 472,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-06-26",
+        "corrupted_value": "2017-06-27",
+        "expected_repair": "2017-06-26"
+      },
+      {
+        "row": 18,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-08-20",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-08-20"
+      },
+      {
+        "row": 220,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-06-26",
+        "corrupted_value": "2017-06-27",
+        "expected_repair": "2017-06-26"
+      },
+      {
+        "row": 586,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-12-28",
+        "corrupted_value": "2017-12-29",
+        "expected_repair": "2017-12-28"
+      },
+      {
+        "row": 22,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-12-24",
+        "corrupted_value": "2017-12-25",
+        "expected_repair": "2017-12-24"
+      },
+      {
+        "row": 537,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-11-07",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-11-07"
+      },
+      {
+        "row": 781,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-03-27",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-03-27"
+      },
+      {
+        "row": 107,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-25",
+        "corrupted_value": "2017-01-26",
+        "expected_repair": "2017-01-25"
+      },
+      {
+        "row": 503,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-01",
+        "corrupted_value": "2017-01-02",
+        "expected_repair": "2017-01-01"
+      },
+      {
+        "row": 479,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-05",
+        "corrupted_value": "2017-01-06",
+        "expected_repair": "2017-01-05"
+      },
+      {
+        "row": 90,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-08-08",
+        "corrupted_value": "2017-08-09",
+        "expected_repair": "2017-08-08"
+      },
+      {
+        "row": 720,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-02-22",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-02-22"
+      },
+      {
+        "row": 320,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-10-14",
+        "corrupted_value": "2017-10-15",
+        "expected_repair": "2017-10-14"
+      },
+      {
+        "row": 87,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-05-05",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-05-05"
+      },
+      {
+        "row": 741,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-11-15",
+        "corrupted_value": "2017-11-16",
+        "expected_repair": "2017-11-15"
+      },
+      {
+        "row": 195,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-05-01",
+        "corrupted_value": "2017-05-02",
+        "expected_repair": "2017-05-01"
+      },
+      {
+        "row": 275,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-01-25",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-01-25"
+      },
+      {
+        "row": 648,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-02-06",
+        "corrupted_value": "2017-02-07",
+        "expected_repair": "2017-02-06"
+      },
+      {
+        "row": 231,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-05-09",
+        "corrupted_value": "2017-05-10",
+        "expected_repair": "2017-05-09"
+      },
+      {
+        "row": 99,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-05-17",
+        "corrupted_value": "2017-05-18",
+        "expected_repair": "2017-05-17"
+      },
+      {
+        "row": 66,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-08-12",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-08-12"
+      },
+      {
+        "row": 395,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-01-05",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-01-05"
+      },
+      {
+        "row": 449,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-07-03",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-07-03"
+      },
+      {
+        "row": 297,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-11-19",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-11-19"
+      },
+      {
+        "row": 663,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-05-21",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-05-21"
+      },
+      {
+        "row": 483,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-05-09",
+        "corrupted_value": "2017-05-10",
+        "expected_repair": "2017-05-09"
+      },
+      {
+        "row": 631,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-09-17",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-09-17"
+      },
+      {
+        "row": 703,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-09-05",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-09-05"
+      },
+      {
+        "row": 23,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-25",
+        "corrupted_value": "2017-01-26",
+        "expected_repair": "2017-01-25"
+      },
+      {
+        "row": 554,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-04-24",
+        "corrupted_value": "2017-04-25",
+        "expected_repair": "2017-04-24"
+      },
+      {
+        "row": 447,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-05-01",
+        "corrupted_value": "2017-05-02",
+        "expected_repair": "2017-05-01"
+      },
+      {
+        "row": 198,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-08-04",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-08-04"
+      },
+      {
+        "row": 79,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-25",
+        "corrupted_value": "2017-09-26",
+        "expected_repair": "2017-09-25"
+      },
+      {
+        "row": 662,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-20",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-20"
+      },
+      {
+        "row": 12,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-02-14",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-02-14"
+      },
+      {
+        "row": 53,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-07-27",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-07-27"
+      },
+      {
+        "row": 328,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-06-22",
+        "corrupted_value": "2017-06-23",
+        "expected_repair": "2017-06-22"
+      },
+      {
+        "row": 411,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-05-21",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-05-21"
+      },
+      {
+        "row": 43,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-09-17",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-09-17"
+      },
+      {
+        "row": 86,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-04",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-04"
+      },
+      {
+        "row": 131,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-21",
+        "corrupted_value": "2017-01-22",
+        "expected_repair": "2017-01-21"
+      },
+      {
+        "row": 504,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-02-02",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-02-02"
+      },
+      {
+        "row": 588,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-02-02",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-02-02"
+      },
+      {
+        "row": 606,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-08-20",
+        "corrupted_value": "2017-08-21",
+        "expected_repair": "2017-08-20"
+      },
+      {
+        "row": 559,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-01",
+        "corrupted_value": "2017-09-02",
+        "expected_repair": "2017-09-01"
+      },
+      {
+        "row": 636,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-02-22",
+        "corrupted_value": "2017-02-23",
+        "expected_repair": "2017-02-22"
+      },
+      {
+        "row": 348,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-02-14",
+        "corrupted_value": "2017-02-15",
+        "expected_repair": "2017-02-14"
+      },
+      {
+        "row": 392,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-10-02",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-10-02"
+      },
+      {
+        "row": 175,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-09",
+        "corrupted_value": "2017-09-10",
+        "expected_repair": "2017-09-09"
+      },
+      {
+        "row": 583,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-25",
+        "corrupted_value": "2017-09-26",
+        "expected_repair": "2017-09-25"
+      },
+      {
+        "row": 394,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-12-04",
+        "corrupted_value": "2017-12-05",
+        "expected_repair": "2017-12-04"
+      },
+      {
+        "row": 593,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-07-07",
+        "corrupted_value": "2017-07-08",
+        "expected_repair": "2017-07-07"
+      },
+      {
+        "row": 337,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-03-03",
+        "corrupted_value": "2017-03-04",
+        "expected_repair": "2017-03-03"
+      },
+      {
+        "row": 772,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-06-18",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-06-18"
+      },
+      {
+        "row": 102,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-08-20",
+        "corrupted_value": "2017-08-21",
+        "expected_repair": "2017-08-20"
+      },
+      {
+        "row": 145,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-03-07",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-03-07"
+      },
+      {
+        "row": 164,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-10-26",
+        "corrupted_value": "2017-10-27",
+        "expected_repair": "2017-10-26"
+      },
+      {
+        "row": 217,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-03-23",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-03-23"
+      },
+      {
+        "row": 415,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-09-25",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-09-25"
+      },
+      {
+        "row": 202,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-12-08",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-12-08"
+      },
+      {
+        "row": 153,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-11-15",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-11-15"
+      },
+      {
+        "row": 54,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-08-28",
+        "corrupted_value": "2017-08-29",
+        "expected_repair": "2017-08-28"
+      },
+      {
+        "row": 168,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-02-02",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-02-02"
+      },
+      {
+        "row": 647,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-01-05",
+        "corrupted_value": "2017-01-06",
+        "expected_repair": "2017-01-05"
+      },
+      {
+        "row": 738,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-08-12",
+        "corrupted_value": "2017-08-13",
+        "expected_repair": "2017-08-12"
+      },
+      {
+        "row": 697,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-03-27",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-03-27"
+      },
+      {
+        "row": 457,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-03-11",
+        "corrupted_value": "2017-03-12",
+        "expected_repair": "2017-03-11"
+      },
+      {
+        "row": 354,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-08-20",
+        "corrupted_value": "2017-08-21",
+        "expected_repair": "2017-08-20"
+      },
+      {
+        "row": 379,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-09-17",
+        "corrupted_value": "2017-09-18",
+        "expected_repair": "2017-09-17"
+      },
+      {
+        "row": 605,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-07-19",
+        "corrupted_value": "2017-07-20",
+        "expected_repair": "2017-07-19"
+      },
+      {
+        "row": 568,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-06-10",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-06-10"
+      },
+      {
+        "row": 229,
+        "column": "FlightDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "2017-03-07",
+        "corrupted_value": "2017-03-08",
+        "expected_repair": "2017-03-07"
+      },
+      {
+        "row": 494,
+        "column": "FlightDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "2017-04-20",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "2017-04-20"
+      }
+    ],
+    "new_detected": [
+      [
+        12,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        17,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        18,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        34,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        43,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        49,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        50,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        53,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        63,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        66,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        68,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        85,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        86,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        87,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        91,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        92,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        145,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        153,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        168,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        188,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        189,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        193,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        198,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        202,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        211,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        217,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        258,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        275,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        277,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        282,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        297,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        302,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        309,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        314,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        317,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        330,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        341,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        365,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        381,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        392,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        395,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        411,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        415,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        439,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        446,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        449,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        494,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        504,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        508,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        522,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        537,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        568,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        581,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        584,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        588,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        600,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        622,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        626,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        631,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        657,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        662,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        663,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        674,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        692,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        693,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        697,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        703,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        704,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        706,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        707,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        717,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        720,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        722,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        772,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        781,
+        "FlightDate",
+        "Invalid date"
+      ],
+      [
+        796,
+        "FlightDate",
+        "Invalid date"
+      ]
+    ],
+    "baseline_findings_before_injection": 3450,
+    "true_positives": 76,
+    "false_positives": 0,
+    "false_negatives": 85,
+    "precision_pct": 100.0,
+    "recall_pct": 47.2,
+    "f1_pct": 64.14,
+    "no_positive_predictions": false,
+    "clean_false_positive_rate_pct": 0.0,
+    "repair_attempts": 0,
+    "repairable_cases": 161,
+    "repair_correct": 0,
+    "repair_unsafe": 0,
+    "repair_accuracy_pct": null,
+    "safe_repair_coverage_pct": 0.0,
+    "unsafe_repair_rate_pct": null,
+    "blocked_or_reviewed": 161,
+    "quarantined_rows": 801,
+    "post_repair_findings": 0,
+    "obvious_case_metrics": {
+      "true_positives": 76,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision_pct": 100.0,
+      "recall_pct": 100.0,
+      "f1_pct": 100.0,
+      "no_positive_predictions": false
+    },
+    "plausible_case_metrics": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 85,
+      "precision_pct": null,
+      "recall_pct": 0.0,
+      "f1_pct": null,
+      "no_positive_predictions": true
+    },
+    "research_readiness": {
+      "status": "recommended",
+      "reference_rows": 803,
+      "minimum_recommended_rows": 30,
+      "reason": "Below 30 rows, percentage-based corruption scenarios remain coarse and should be treated as a demonstration. Publication claims should use larger independently sourced datasets."
+    },
+    "method": "Controlled corruptions are applied directly to the uploaded reference without pre-cleaning by SelfHealDS. Each case stores its original value, corrupted value, issue label and expected repair where applicable. Natural pre-existing findings are subtracted from the prediction set so they do not become benchmark false positives. The corruption mix includes obvious rule violations and plausible-but-wrong values to test the abstention boundary.",
+    "metric_definitions": {
+      "precision": "TP/(TP+FP), conditional on the system making a positive detection.",
+      "recall": "TP/(TP+FN), proportion of injected labelled corruptions detected with the matching issue label.",
+      "f1": "Harmonic mean of precision and recall.",
+      "repair_accuracy": "Correct repaired target divided by automatic repair attempts; conditional on automation. Non-inferable cases are never counted as correct.",
+      "safe_repair_coverage": "Correct automatic repairs divided by injected cases with an explicitly known safe target. This measures how much of the safely repairable benchmark was actually repaired correctly.",
+      "clean_false_positive_rate": "False positives divided by the cells that were NOT deliberately corrupted (total reference cells minus injected cases). Measures how often the detector raises a finding on data it had no reason to flag.",
+      "unsafe_repair_rate": "Unsafe/incorrect automatic repairs divided by automatic repair attempts; N/A when no automatic repair was attempted."
+    },
+    "precision": 100.0,
+    "recall": 47.2,
+    "f1": 64.14
+  },
+  "llm_repair_scores": {
+    "repair_attempts": 31,
+    "repairable_cases": 60,
+    "repair_correct": 13,
+    "repair_unsafe": 18,
+    "not_touched": 29,
+    "repair_accuracy_pct": 41.94,
+    "safe_repair_coverage_pct": 21.67,
+    "unsafe_repair_rate_pct": 58.06
+  },
+  "llm_collateral_changes": {
+    "comparable": true,
+    "collateral_change_count": 8,
+    "collateral_change_rate_pct": 0.1802,
+    "examples": [
+      {
+        "row": 33,
+        "column": "Origin",
+        "original": "JFKK",
+        "llm_value": "JFK"
+      },
+      {
+        "row": 177,
+        "column": "Origin",
+        "original": "JFKK",
+        "llm_value": "JFK"
+      },
+      {
+        "row": 61,
+        "column": "DepTime",
+        "original": "25:90",
+        "llm_value": "1147"
+      },
+      {
+        "row": 222,
+        "column": "DepTime",
+        "original": "25:90",
+        "llm_value": "1522"
+      },
+      {
+        "row": 17,
+        "column": "ArrDelay",
+        "original": "unknown",
+        "llm_value": "-32"
+      },
+      {
+        "row": 82,
+        "column": "ArrDelay",
+        "original": "unknown",
+        "llm_value": "7"
+      },
+      {
+        "row": 203,
+        "column": "ArrDelay",
+        "original": "unknown",
+        "llm_value": "-13"
+      },
+      {
+        "row": 90,
+        "column": "Cancelled",
+        "original": "yes",
+        "llm_value": "1"
+      }
+    ]
+  },
+  "llm_output_parse_error": null,
+  "domain_trap_check": null,
+  "capability_checklist": {
+    "Per-cell rule ID attached to every change": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Evidence-strength / confidence score per change": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Human-readable evidence basis per change": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Explicit repair-decision hierarchy (deterministic > imputation > semantic > flag-only > quarantine)": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Post-repair re-validation gate (pass/fail per cell)": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Abstains instead of fabricating when evidence is insufficient": {
+      "selfhealds": true,
+      "llm_baseline": "not guaranteed by a plain cleaning prompt"
+    },
+    "Deterministic / reproducible output for identical input+seed": {
+      "selfhealds": true,
+      "llm_baseline": "not guaranteed (model/version/decoding dependent)"
+    },
+    "Exportable machine-readable audit trail": {
+      "selfhealds": true,
+      "llm_baseline": false
+    }
+  },
+  "notes": [
+    "SelfHealDS metrics are computed on the FULL messy dataset via the existing evaluate_detection() benchmark, unmodified.",
+    "LLM metrics are computed only over the row-capped subset actually sent to the model, because general-purpose chat completion has a practical context/cost limit that the deterministic pipeline does not. This asymmetry is itself part of the finding and should be stated explicitly in the paper's Results section, not hidden by reporting only percentages.",
+    "expected_repair values with a value of None are non-inferable by design (e.g. a three-digit phone number); the LLM, like SelfHealDS, cannot score 'correct' on these \u2014 any change to such a cell is counted as unsafe."
+  ]
+}

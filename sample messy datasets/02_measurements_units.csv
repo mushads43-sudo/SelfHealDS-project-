@@ -1,0 +1,7 @@
+id,product,weight,mass,length,temperature
+1,Product A,5000 g,2 kg,100 cm,32 F
+2,Product B,2 kg,1500 g,1 m,20 C
+3,Product C,750 g,3 kg,250 mm,68 F
+4,Product D,1 kg,500 g,2 m,25 Celsius
+5,Product E,2500 mg,4 kg,0.5 km,77 F
+6,Product F,bad unit,2 kg,unknown,20 C

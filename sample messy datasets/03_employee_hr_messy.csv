@@ -1,0 +1,7 @@
+employee_id,employee_name,age,email,city,country,salary,joining_date
+1,Priya Shah,-22,priya@example.com,Mumbai,France,50000,2025-01-10
+2,Rohan Mehta,27,rohan@example.com,Pune,India,"₹75,000",10/01/2025
+3, Ananya Rao ,31,ananyaexample.com,Delhi,India,65000,2025-01-12
+4,Karan,999,karan@example.com,Bengaluru,India,-45000,Jan 13 2025
+5,Priya Shah,-22,priya@example.com,Mumbai,France,50000,2025-01-10
+6,Meera,28,meera@example.com,London,India,72000,2025/01/15

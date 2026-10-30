@@ -1,0 +1,4 @@
+Variant,true_positives,false_positives,false_negatives,precision_pct,recall_pct,f1_pct,no_positive_predictions,note
+Deterministic rules only,295,0,305,100.0,49.17,65.92,False,"Domain, format, unit and semantic rules without ML anomaly findings."
+Hybrid SelfHealDS,295,0,305,100.0,49.17,65.92,False,Full detector including deterministic rules and Isolation Forest statistical anomaly flags.
+Isolation Forest only,N/A,N/A,N/A,N/A,N/A,N/A,,"0 statistical anomaly prediction(s) produced. Its taxonomy does not map one-to-one to deterministic corruption labels, so an F1 score would be invalid."

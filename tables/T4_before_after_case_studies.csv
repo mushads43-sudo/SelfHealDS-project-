@@ -1,0 +1,8 @@
+Case,Rows,Quality before,Quality after,Errors before,Errors after,Repair events,Automatic repairs,Unsafe repairs,Review rows,Validation passed
+Mars Climate Orbiter — unit mismatch,1015,83.64,99.71,1121,0,2347,2325,0,22,True
+Hospital quality benchmark,183,86.36,100.0,372,0,366,183,0,183,True
+Flights multi-source consistency benchmark,803,72.64,100.0,3212,0,811,11,0,800,True
+Chicago Food Inspections data-quality case,1003,97.79,99.39,253,0,255,3,0,252,True
+UCI Air Quality sensor data,1200,97.6,99.93,2,0,1200,1198,0,2,True
+UCI Online Retail transaction semantics,1202,92.89,97.57,26,0,2402,2398,0,4,True
+UCI Adult / Census Income,3000,90.57,100.0,3000,0,5610,2610,602,3000,False

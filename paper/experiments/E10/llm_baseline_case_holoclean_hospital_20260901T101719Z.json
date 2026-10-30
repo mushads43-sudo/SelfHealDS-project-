@@ -1,0 +1,649 @@
+{
+  "generated_at": "2026-09-01T10:17:19.342702+00:00",
+  "experiment": "E10 \u2014 LLM baseline comparison",
+  "llm_eval_version": "2026.09-llm-baseline-v1",
+  "selfhealds_eval_version": "2026.08-eval-v3",
+  "reference_label": "case:holoclean_hospital",
+  "reference_fingerprint": "45bc27ebd45ee3c7",
+  "corruption_rate": 0.1,
+  "seed": 42,
+  "injected_cases": 37,
+  "row_cap": 300,
+  "row_cap_applied": false,
+  "rows_sent_to_llm": 183,
+  "model": "claude.ai free tier",
+  "selfhealds_evaluation": {
+    "generated_at": "2026-09-01T10:17:19.326569+00:00",
+    "evaluation_version": "2026.08-eval-v3",
+    "dataset_fingerprint": "45bc27ebd45ee3c7",
+    "benchmark_reference_fingerprint": "45bc27ebd45ee3c7",
+    "reference_mode": "uploaded_reference_no_preclean",
+    "preexisting_rows_excluded": 0,
+    "corruption_rate": 0.1,
+    "seed": 42,
+    "actual_corruption_cases": 37,
+    "obvious_cases": 16,
+    "plausible_cases": 21,
+    "ground_truth": [
+      {
+        "row": 147,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(348) 648-1148",
+        "corrupted_value": "348",
+        "expected_repair": null
+      },
+      {
+        "row": 123,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(324) 624-1124",
+        "corrupted_value": "324",
+        "expected_repair": null
+      },
+      {
+        "row": 89,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(290) 590-1090",
+        "corrupted_value": "290",
+        "expected_repair": null
+      },
+      {
+        "row": 132,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(333) 633-1133",
+        "corrupted_value": "6333331133",
+        "expected_repair": "(333) 633-1133"
+      },
+      {
+        "row": 17,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(218) 518-1018",
+        "corrupted_value": "218",
+        "expected_repair": null
+      },
+      {
+        "row": 139,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(340) 640-1140",
+        "corrupted_value": "340",
+        "expected_repair": null
+      },
+      {
+        "row": 177,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(378) 678-1178",
+        "corrupted_value": "7386781178",
+        "expected_repair": "(378) 678-1178"
+      },
+      {
+        "row": 104,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(305) 605-1105",
+        "corrupted_value": "305",
+        "expected_repair": null
+      },
+      {
+        "row": 159,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(360) 660-1160",
+        "corrupted_value": "6306601160",
+        "expected_repair": "(360) 660-1160"
+      },
+      {
+        "row": 157,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(358) 658-1158",
+        "corrupted_value": "5386581158",
+        "expected_repair": "(358) 658-1158"
+      },
+      {
+        "row": 88,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(289) 589-1089",
+        "corrupted_value": "8295891089",
+        "expected_repair": "(289) 589-1089"
+      },
+      {
+        "row": 45,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(246) 546-1046",
+        "corrupted_value": "4265461046",
+        "expected_repair": "(246) 546-1046"
+      },
+      {
+        "row": 111,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(312) 612-1112",
+        "corrupted_value": "1326121112",
+        "expected_repair": "(312) 612-1112"
+      },
+      {
+        "row": 26,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(227) 527-1027",
+        "corrupted_value": "7225271027",
+        "expected_repair": "(227) 527-1027"
+      },
+      {
+        "row": 172,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(373) 673-1173",
+        "corrupted_value": "373",
+        "expected_repair": null
+      },
+      {
+        "row": 171,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(372) 672-1172",
+        "corrupted_value": "7326721172",
+        "expected_repair": "(372) 672-1172"
+      },
+      {
+        "row": 32,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(233) 533-1033",
+        "corrupted_value": "3235331033",
+        "expected_repair": "(233) 533-1033"
+      },
+      {
+        "row": 53,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(254) 554-1054",
+        "corrupted_value": "254",
+        "expected_repair": null
+      },
+      {
+        "row": 71,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(272) 572-1072",
+        "corrupted_value": "7225721072",
+        "expected_repair": "(272) 572-1072"
+      },
+      {
+        "row": 148,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(349) 649-1149",
+        "corrupted_value": "349",
+        "expected_repair": null
+      },
+      {
+        "row": 134,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(335) 635-1135",
+        "corrupted_value": "5336351135",
+        "expected_repair": "(335) 635-1135"
+      },
+      {
+        "row": 167,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(368) 668-1168",
+        "corrupted_value": "368",
+        "expected_repair": null
+      },
+      {
+        "row": 166,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(367) 667-1167",
+        "corrupted_value": "6376671167",
+        "expected_repair": "(367) 667-1167"
+      },
+      {
+        "row": 36,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(237) 537-1037",
+        "corrupted_value": "237",
+        "expected_repair": null
+      },
+      {
+        "row": 5,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(206) 506-1006",
+        "corrupted_value": "206",
+        "expected_repair": null
+      },
+      {
+        "row": 95,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(296) 596-1096",
+        "corrupted_value": "9265961096",
+        "expected_repair": "(296) 596-1096"
+      },
+      {
+        "row": 50,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(251) 551-1051",
+        "corrupted_value": "251",
+        "expected_repair": null
+      },
+      {
+        "row": 51,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(252) 552-1052",
+        "corrupted_value": "5225521052",
+        "expected_repair": "(252) 552-1052"
+      },
+      {
+        "row": 83,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(284) 584-1084",
+        "corrupted_value": "8245841084",
+        "expected_repair": "(284) 584-1084"
+      },
+      {
+        "row": 73,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(274) 574-1074",
+        "corrupted_value": "7245741074",
+        "expected_repair": "(274) 574-1074"
+      },
+      {
+        "row": 42,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(243) 543-1043",
+        "corrupted_value": "4235431043",
+        "expected_repair": "(243) 543-1043"
+      },
+      {
+        "row": 131,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(332) 632-1132",
+        "corrupted_value": "2336321132",
+        "expected_repair": "(332) 632-1132"
+      },
+      {
+        "row": 60,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(261) 561-1061",
+        "corrupted_value": "261",
+        "expected_repair": null
+      },
+      {
+        "row": 173,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(374) 674-1174",
+        "corrupted_value": "7346741174",
+        "expected_repair": "(374) 674-1174"
+      },
+      {
+        "row": 155,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(356) 656-1156",
+        "corrupted_value": "356",
+        "expected_repair": null
+      },
+      {
+        "row": 106,
+        "column": "PhoneNumber",
+        "issue_type": "Plausible phone corruption",
+        "difficulty": "plausible",
+        "original_value": "(307) 607-1107",
+        "corrupted_value": "0376071107",
+        "expected_repair": "(307) 607-1107"
+      },
+      {
+        "row": 81,
+        "column": "PhoneNumber",
+        "issue_type": "Invalid phone length",
+        "difficulty": "obvious",
+        "original_value": "(282) 582-1082",
+        "corrupted_value": "282",
+        "expected_repair": null
+      }
+    ],
+    "new_detected": [
+      [
+        5,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        17,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        36,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        50,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        53,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        60,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        81,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        89,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        104,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        123,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        139,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        147,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        148,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        155,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        167,
+        "PhoneNumber",
+        "Invalid phone length"
+      ],
+      [
+        172,
+        "PhoneNumber",
+        "Invalid phone length"
+      ]
+    ],
+    "baseline_findings_before_injection": 667,
+    "true_positives": 16,
+    "false_positives": 0,
+    "false_negatives": 21,
+    "precision_pct": 100.0,
+    "recall_pct": 43.24,
+    "f1_pct": 60.38,
+    "no_positive_predictions": false,
+    "clean_false_positive_rate_pct": 0.0,
+    "repair_attempts": 0,
+    "repairable_cases": 21,
+    "repair_correct": 0,
+    "repair_unsafe": 0,
+    "repair_accuracy_pct": null,
+    "safe_repair_coverage_pct": 0.0,
+    "unsafe_repair_rate_pct": null,
+    "blocked_or_reviewed": 37,
+    "quarantined_rows": 183,
+    "post_repair_findings": 0,
+    "obvious_case_metrics": {
+      "true_positives": 16,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision_pct": 100.0,
+      "recall_pct": 100.0,
+      "f1_pct": 100.0,
+      "no_positive_predictions": false
+    },
+    "plausible_case_metrics": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 21,
+      "precision_pct": null,
+      "recall_pct": 0.0,
+      "f1_pct": null,
+      "no_positive_predictions": true
+    },
+    "research_readiness": {
+      "status": "recommended",
+      "reference_rows": 183,
+      "minimum_recommended_rows": 30,
+      "reason": "Below 30 rows, percentage-based corruption scenarios remain coarse and should be treated as a demonstration. Publication claims should use larger independently sourced datasets."
+    },
+    "method": "Controlled corruptions are applied directly to the uploaded reference without pre-cleaning by SelfHealDS. Each case stores its original value, corrupted value, issue label and expected repair where applicable. Natural pre-existing findings are subtracted from the prediction set so they do not become benchmark false positives. The corruption mix includes obvious rule violations and plausible-but-wrong values to test the abstention boundary.",
+    "metric_definitions": {
+      "precision": "TP/(TP+FP), conditional on the system making a positive detection.",
+      "recall": "TP/(TP+FN), proportion of injected labelled corruptions detected with the matching issue label.",
+      "f1": "Harmonic mean of precision and recall.",
+      "repair_accuracy": "Correct repaired target divided by automatic repair attempts; conditional on automation. Non-inferable cases are never counted as correct.",
+      "safe_repair_coverage": "Correct automatic repairs divided by injected cases with an explicitly known safe target. This measures how much of the safely repairable benchmark was actually repaired correctly.",
+      "clean_false_positive_rate": "False positives divided by the cells that were NOT deliberately corrupted (total reference cells minus injected cases). Measures how often the detector raises a finding on data it had no reason to flag.",
+      "unsafe_repair_rate": "Unsafe/incorrect automatic repairs divided by automatic repair attempts; N/A when no automatic repair was attempted."
+    },
+    "precision": 100.0,
+    "recall": 43.24,
+    "f1": 60.38
+  },
+  "llm_repair_scores": {
+    "repair_attempts": 37,
+    "repairable_cases": 21,
+    "repair_correct": 21,
+    "repair_unsafe": 16,
+    "not_touched": 0,
+    "repair_accuracy_pct": 56.76,
+    "safe_repair_coverage_pct": 100.0,
+    "unsafe_repair_rate_pct": 43.24
+  },
+  "llm_collateral_changes": {
+    "comparable": true,
+    "collateral_change_count": 18,
+    "collateral_change_rate_pct": 0.5233,
+    "examples": [
+      {
+        "row": 7,
+        "column": "ZipCode",
+        "original": "6060X",
+        "llm_value": "98101"
+      },
+      {
+        "row": 21,
+        "column": "ZipCode",
+        "original": "6060X",
+        "llm_value": "78701"
+      },
+      {
+        "row": 44,
+        "column": "ZipCode",
+        "original": "6060X",
+        "llm_value": "60601"
+      },
+      {
+        "row": 88,
+        "column": "ZipCode",
+        "original": "6060X",
+        "llm_value": "85001"
+      },
+      {
+        "row": 39,
+        "column": "CountyName",
+        "original": "Cooke",
+        "llm_value": "Cook"
+      },
+      {
+        "row": 103,
+        "column": "CountyName",
+        "original": "Cooke",
+        "llm_value": "Cook"
+      },
+      {
+        "row": 12,
+        "column": "PhoneNumber",
+        "original": "INVALID",
+        "llm_value": "(213) 513-1013"
+      },
+      {
+        "row": 37,
+        "column": "PhoneNumber",
+        "original": "INVALID",
+        "llm_value": "(238) 538-1038"
+      },
+      {
+        "row": 59,
+        "column": "PhoneNumber",
+        "original": "INVALID",
+        "llm_value": "(260) 560-1060"
+      },
+      {
+        "row": 25,
+        "column": "HospitalOwner",
+        "original": "Government-Federal",
+        "llm_value": "Government - Federal"
+      },
+      {
+        "row": 92,
+        "column": "HospitalOwner",
+        "original": "Government-Federal",
+        "llm_value": "Government - Federal"
+      },
+      {
+        "row": 144,
+        "column": "HospitalOwner",
+        "original": "Government-Federal",
+        "llm_value": "Government - Federal"
+      },
+      {
+        "row": 18,
+        "column": "EmergencyService",
+        "original": "Yess",
+        "llm_value": "Yes"
+      },
+      {
+        "row": 73,
+        "column": "EmergencyService",
+        "original": "Yess",
+        "llm_value": "Yes"
+      },
+      {
+        "row": 121,
+        "column": "EmergencyService",
+        "original": "Yess",
+        "llm_value": "Yes"
+      }
+    ]
+  },
+  "llm_output_parse_error": null,
+  "domain_trap_check": null,
+  "capability_checklist": {
+    "Per-cell rule ID attached to every change": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Evidence-strength / confidence score per change": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Human-readable evidence basis per change": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Explicit repair-decision hierarchy (deterministic > imputation > semantic > flag-only > quarantine)": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Post-repair re-validation gate (pass/fail per cell)": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Abstains instead of fabricating when evidence is insufficient": {
+      "selfhealds": true,
+      "llm_baseline": "not guaranteed by a plain cleaning prompt"
+    },
+    "Deterministic / reproducible output for identical input+seed": {
+      "selfhealds": true,
+      "llm_baseline": "not guaranteed (model/version/decoding dependent)"
+    },
+    "Exportable machine-readable audit trail": {
+      "selfhealds": true,
+      "llm_baseline": false
+    }
+  },
+  "notes": [
+    "SelfHealDS metrics are computed on the FULL messy dataset via the existing evaluate_detection() benchmark, unmodified.",
+    "LLM metrics are computed only over the row-capped subset actually sent to the model, because general-purpose chat completion has a practical context/cost limit that the deterministic pipeline does not. This asymmetry is itself part of the finding and should be stated explicitly in the paper's Results section, not hidden by reporting only percentages.",
+    "expected_repair values with a value of None are non-inferable by design (e.g. a three-digit phone number); the LLM, like SelfHealDS, cannot score 'correct' on these \u2014 any change to such a cell is counted as unsafe."
+  ]
+}

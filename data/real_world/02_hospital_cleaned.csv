@@ -1,0 +1,184 @@
+ProviderNumber,HospitalName,Address1,Address2,Address3,City,State,ZipCode,CountyName,PhoneNumber,HospitalType,HospitalOwner,EmergencyService,Condition,MeasureCode,MeasureName,Score,Sample,Stateavg
+10001,Boston Regional Medical Center,101 Main St,,,Boston,MA,02108,Suffolk,2015011001,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10002,Austin Regional Medical Center,102 Main St,,,Austin,TX,78701,Travis,2025021002,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10003,Seattle Regional Medical Center,103 Main St,,,Seattle,WA,98101,King,2035031003,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10004,Phoenix Regional Medical Center,104 Main St,,,Phoenix,AZ,85001,Maricopa,2045041004,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10005,Chicago Regional Medical Center,105 Main St,,,Chicago,IL,60601,Cook,2055051005,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10006,Boston Regional Medical Center,106 Main St,,,Boston,MA,02108,Suffolk,2065061006,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10007,Austin Regional Medical Center,107 Main St,,,Austin,TX,78701,Travis,2075071007,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10008,Seattle Regional Medical Center,108 Main St,,,Seattle,WA,6060X,King,2085081008,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10009,Phoenix Regional Medical Center,109 Main St,,,Phoenix,AZ,85001,Maricopa,2095091009,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10010,Chicago Regional Medical Center,110 Main St,,,Chicago,IL,60601,Cook,2105101010,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10011,Boston Regional Medical Center,111 Main St,,,Boston,MA,02108,Suffolk,2115111011,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10012,Austin Regional Medical Center,112 Main St,,,Austin,TX,78701,Travis,2125121012,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10013,Seattle Regional Medical Center,113 Main St,,,Seattle,WA,98101,King,2115111011,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10014,Phoenix Regional Medical Center,114 Main St,,,Phoenix,AZ,85001,Maricopa,2145141014,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10015,Chicago Regional Medical Center,115 Main St,,,Chicago,IL,60601,Cook,2155151015,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10016,Boston Regional Medical Center,116 Main St,,,Boston,MA,02108,Suffolk,2165161016,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10017,Austin Regional Medical Center,117 Main St,,,Austin,TX,78701,Travis,2175171017,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10018,Seattle Regional Medical Center,118 Main St,,,Seattle,WA,98101,King,2185181018,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10019,Phoenix Regional Medical Center,119 Main St,,,Phoenix,AZ,85001,Maricopa,2195191019,Acute Care Hospitals,Proprietary,Yess,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10020,Chicago Regional Medical Center,120 Main St,,,Chicago,IL,60601,Cook,2205201020,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10021,Boston Regional Medical Center,121 Main St,,,Boston,MA,02108,Suffolk,2215211021,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10022,Austin Regional Medical Center,122 Main St,,,Austin,TX,6060X,Travis,2225221022,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10023,Seattle Regional Medical Center,123 Main St,,,Seattle,WA,98101,King,2235231023,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10024,Phoenix Regional Medical Center,124 Main St,,,Phoenix,AZ,85001,Maricopa,2245241024,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10025,Chicago Regional Medical Center,125 Main St,,,Chicago,IL,60601,Cook,2255251025,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10026,Boston Regional Medical Center,126 Main St,,,Boston,MA,02108,Suffolk,2265261026,Acute Care Hospitals,Government-Federal,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10027,Austin Regional Medical Center,127 Main St,,,Austin,TX,78701,Travis,2275271027,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10028,Seattle Regional Medical Center,128 Main St,,,Seattle,WA,98101,King,2285281028,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10029,Phoenix Regional Medical Center,129 Main St,,,Phoenix,AZ,85001,Maricopa,2295291029,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10030,Chicago Regional Medical Center,130 Main St,,,Chicago,IL,60601,Cook,2305301030,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10031,Boston Regional Medical Center,131 Main St,,,Boston,MA,02108,Suffolk,2315311031,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10032,Austin Regional Medical Center,132 Main St,,,Austin,TX,78701,Travis,2325321032,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,12.0,210,15
+10033,Seattle Regional Medical Center,133 Main St,,,Seattle,WA,98101,King,2335331033,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10034,Phoenix Regional Medical Center,134 Main St,,,Phoenix,AZ,85001,Maricopa,2345341034,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10035,Chicago Regional Medical Center,135 Main St,,,Chicago,IL,60601,Cook,2355351035,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10036,Boston Regional Medical Center,136 Main St,,,Boston,MA,02108,Suffolk,2365361036,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10037,Austin Regional Medical Center,137 Main St,,,Austin,TX,78701,Travis,2375371037,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10038,Seattle Regional Medical Center,138 Main St,,,Seattle,WA,98101,King,2115111011,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10039,Phoenix Regional Medical Center,139 Main St,,,Phoenix,AZ,85001,Maricopa,2395391039,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10040,Chicago Regional Medical Center,140 Main St,,,Chicago,IL,60601,Cooke,2405401040,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10041,Boston Regional Medical Center,141 Main St,,,Boston,MA,02108,Suffolk,2415411041,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10042,Austin Regional Medical Center,142 Main St,,,Austin,TX,78701,Travis,2425421042,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10043,Seattle Regional Medical Center,143 Main St,,,Seattle,WA,98101,King,2435431043,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10044,Phoenix Regional Medical Center,144 Main St,,,Phoenix,AZ,85001,Maricopa,2445441044,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10045,Chicago Regional Medical Center,145 Main St,,,Chicago,IL,6060X,Cook,2455451045,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10046,Boston Regional Medical Center,146 Main St,,,Boston,MA,02108,Suffolk,2465461046,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10047,Austin Regional Medical Center,147 Main St,,,Austin,TX,78701,Travis,2475471047,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10048,Seattle Regional Medical Center,148 Main St,,,Seattle,WA,98101,King,2485481048,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10049,Phoenix Regional Medical Center,149 Main St,,,Phoenix,AZ,85001,Maricopa,2495491049,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10050,Chicago Regional Medical Center,150 Main St,,,Chicago,IL,60601,Cook,2505501050,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10051,Boston Regional Medical Center,151 Main St,,,Boston,MA,02108,Suffolk,2515511051,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10052,Austin Regional Medical Center,152 Main St,,,Austin,TX,78701,Travis,2525521052,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10053,Seattle Regional Medical Center,153 Main St,,,Seattle,WA,98101,King,2535531053,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10054,Phoenix Regional Medical Center,154 Main St,,,Phoenix,AZ,85001,Maricopa,2545541054,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10055,Chicago Regional Medical Center,155 Main St,,,Chicago,IL,60601,Cook,2555551055,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10056,Boston Regional Medical Center,156 Main St,,,Boston,MA,02108,Suffolk,2565561056,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10057,Austin Regional Medical Center,157 Main St,,,Austin,TX,78701,Travis,2575571057,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10058,Seattle Regional Medical Center,158 Main St,,,Seattle,WA,98101,King,2585581058,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10059,Phoenix Regional Medical Center,159 Main St,,,Phoenix,AZ,85001,Maricopa,2595591059,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10060,Chicago Regional Medical Center,160 Main St,,,Chicago,IL,60601,Cook,2115111011,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10061,Boston Regional Medical Center,161 Main St,,,Boston,MA,02108,Suffolk,2615611061,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10062,Austin Regional Medical Center,162 Main St,,,Austin,TX,78701,Travis,2625621062,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10063,Seattle Regional Medical Center,163 Main St,,,Seattle,WA,98101,King,2635631063,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10064,Phoenix Regional Medical Center,164 Main St,,,Phoenix,AZ,85001,Maricopa,2645641064,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10065,Chicago Regional Medical Center,165 Main St,,,Chicago,IL,60601,Cook,2655651065,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,12.0,210,15
+10066,Boston Regional Medical Center,166 Main St,,,Boston,MA,02108,Suffolk,2665661066,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10067,Austin Regional Medical Center,167 Main St,,,Austin,TX,78701,Travis,2675671067,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10068,Seattle Regional Medical Center,168 Main St,,,Seattle,WA,98101,King,2685681068,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10069,Phoenix Regional Medical Center,169 Main St,,,Phoenix,AZ,85001,Maricopa,2695691069,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10070,Chicago Regional Medical Center,170 Main St,,,Chicago,IL,60601,Cook,2705701070,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10071,Boston Regional Medical Center,171 Main St,,,Boston,MA,02108,Suffolk,2715711071,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10072,Austin Regional Medical Center,172 Main St,,,Austin,TX,78701,Travis,2725721072,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10073,Seattle Regional Medical Center,173 Main St,,,Seattle,WA,98101,King,2735731073,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10074,Phoenix Regional Medical Center,174 Main St,,,Phoenix,AZ,85001,Maricopa,2745741074,Acute Care Hospitals,Voluntary non-profit,Yess,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10075,Chicago Regional Medical Center,175 Main St,,,Chicago,IL,60601,Cook,2755751075,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10076,Boston Regional Medical Center,176 Main St,,,Boston,MA,02108,Suffolk,2765761076,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10077,Austin Regional Medical Center,177 Main St,,,Austin,TX,78701,Travis,2775771077,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10078,Seattle Regional Medical Center,178 Main St,,,Seattle,WA,98101,King,2785781078,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10079,Phoenix Regional Medical Center,179 Main St,,,Phoenix,AZ,85001,Maricopa,2795791079,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10080,Chicago Regional Medical Center,180 Main St,,,Chicago,IL,60601,Cook,2805801080,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10081,Boston Regional Medical Center,181 Main St,,,Boston,MA,02108,Suffolk,2815811081,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10082,Austin Regional Medical Center,182 Main St,,,Austin,TX,78701,Travis,2825821082,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10083,Seattle Regional Medical Center,183 Main St,,,Seattle,WA,98101,King,2835831083,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10084,Phoenix Regional Medical Center,184 Main St,,,Phoenix,AZ,85001,Maricopa,2845841084,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10085,Chicago Regional Medical Center,185 Main St,,,Chicago,IL,60601,Cook,2855851085,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10086,Boston Regional Medical Center,186 Main St,,,Boston,MA,02108,Suffolk,2865861086,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10087,Austin Regional Medical Center,187 Main St,,,Austin,TX,78701,Travis,2875871087,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10088,Seattle Regional Medical Center,188 Main St,,,Seattle,WA,98101,King,2885881088,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10089,Phoenix Regional Medical Center,189 Main St,,,Phoenix,AZ,6060X,Maricopa,2895891089,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10090,Chicago Regional Medical Center,190 Main St,,,Chicago,IL,60601,Cook,2905901090,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10091,Boston Regional Medical Center,191 Main St,,,Boston,MA,02108,Suffolk,2915911091,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10092,Austin Regional Medical Center,192 Main St,,,Austin,TX,78701,Travis,2925921092,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10093,Seattle Regional Medical Center,193 Main St,,,Seattle,WA,98101,King,2935931093,Acute Care Hospitals,Government-Federal,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10094,Phoenix Regional Medical Center,194 Main St,,,Phoenix,AZ,85001,Maricopa,2945941094,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10095,Chicago Regional Medical Center,195 Main St,,,Chicago,IL,60601,Cook,2955951095,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10096,Boston Regional Medical Center,196 Main St,,,Boston,MA,02108,Suffolk,2965961096,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10097,Austin Regional Medical Center,197 Main St,,,Austin,TX,78701,Travis,2975971097,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10098,Seattle Regional Medical Center,198 Main St,,,Seattle,WA,98101,King,2985981098,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10099,Phoenix Regional Medical Center,199 Main St,,,Phoenix,AZ,85001,Maricopa,2995991099,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10100,Chicago Regional Medical Center,200 Main St,,,Chicago,IL,60601,Cook,3006001100,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10101,Boston Regional Medical Center,201 Main St,,,Boston,MA,02108,Suffolk,3016011101,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10102,Austin Regional Medical Center,202 Main St,,,Austin,TX,78701,Travis,3026021102,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10103,Seattle Regional Medical Center,203 Main St,,,Seattle,WA,98101,King,3036031103,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10104,Phoenix Regional Medical Center,204 Main St,,,Phoenix,AZ,85001,Cooke,3046041104,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10105,Chicago Regional Medical Center,205 Main St,,,Chicago,IL,60601,Cook,3056051105,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10106,Boston Regional Medical Center,206 Main St,,,Boston,MA,02108,Suffolk,3066061106,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10107,Austin Regional Medical Center,207 Main St,,,Austin,TX,78701,Travis,3076071107,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10108,Seattle Regional Medical Center,208 Main St,,,Seattle,WA,98101,King,3086081108,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10109,Phoenix Regional Medical Center,209 Main St,,,Phoenix,AZ,85001,Maricopa,3096091109,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10110,Chicago Regional Medical Center,210 Main St,,,Chicago,IL,60601,Cook,3106101110,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10111,Boston Regional Medical Center,211 Main St,,,Boston,MA,02108,Suffolk,3116111111,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10112,Austin Regional Medical Center,212 Main St,,,Austin,TX,78701,Travis,3126121112,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10113,Seattle Regional Medical Center,213 Main St,,,Seattle,WA,98101,King,3136131113,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10114,Phoenix Regional Medical Center,214 Main St,,,Phoenix,AZ,85001,Maricopa,3146141114,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10115,Chicago Regional Medical Center,215 Main St,,,Chicago,IL,60601,Cook,3156151115,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10116,Boston Regional Medical Center,216 Main St,,,Boston,MA,02108,Suffolk,3166161116,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10117,Austin Regional Medical Center,217 Main St,,,Austin,TX,78701,Travis,3176171117,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10118,Seattle Regional Medical Center,218 Main St,,,Seattle,WA,98101,King,3186181118,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10119,Phoenix Regional Medical Center,219 Main St,,,Phoenix,AZ,85001,Maricopa,3196191119,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10120,Chicago Regional Medical Center,220 Main St,,,Chicago,IL,60601,Cook,3206201120,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10121,Boston Regional Medical Center,221 Main St,,,Boston,MA,02108,Suffolk,3216211121,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10122,Austin Regional Medical Center,222 Main St,,,Austin,TX,78701,Travis,3226221122,Acute Care Hospitals,Voluntary non-profit,Yess,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10123,Seattle Regional Medical Center,223 Main St,,,Seattle,WA,98101,King,3236231123,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10124,Phoenix Regional Medical Center,224 Main St,,,Phoenix,AZ,85001,Maricopa,3246241124,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10125,Chicago Regional Medical Center,225 Main St,,,Chicago,IL,60601,Cook,3256251125,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10126,Boston Regional Medical Center,226 Main St,,,Boston,MA,02108,Suffolk,3266261126,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10127,Austin Regional Medical Center,227 Main St,,,Austin,TX,78701,Travis,3276271127,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10128,Seattle Regional Medical Center,228 Main St,,,Seattle,WA,98101,King,3286281128,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10129,Phoenix Regional Medical Center,229 Main St,,,Phoenix,AZ,85001,Maricopa,3296291129,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10130,Chicago Regional Medical Center,230 Main St,,,Chicago,IL,60601,Cook,3306301130,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10131,Boston Regional Medical Center,231 Main St,,,Boston,MA,02108,Suffolk,3316311131,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10132,Austin Regional Medical Center,232 Main St,,,Austin,TX,78701,Travis,3326321132,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10133,Seattle Regional Medical Center,233 Main St,,,Seattle,WA,98101,King,3336331133,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10134,Phoenix Regional Medical Center,234 Main St,,,Phoenix,AZ,85001,Maricopa,3346341134,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10135,Chicago Regional Medical Center,235 Main St,,,Chicago,IL,60601,Cook,3356351135,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10136,Boston Regional Medical Center,236 Main St,,,Boston,MA,02108,Suffolk,3366361136,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10137,Austin Regional Medical Center,237 Main St,,,Austin,TX,78701,Travis,3376371137,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10138,Seattle Regional Medical Center,238 Main St,,,Seattle,WA,98101,King,3386381138,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10139,Phoenix Regional Medical Center,239 Main St,,,Phoenix,AZ,85001,Maricopa,3396391139,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10140,Chicago Regional Medical Center,240 Main St,,,Chicago,IL,60601,Cook,3406401140,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10141,Boston Regional Medical Center,241 Main St,,,Boston,MA,02108,Suffolk,3416411141,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10142,Austin Regional Medical Center,242 Main St,,,Austin,TX,78701,Travis,3426421142,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10143,Seattle Regional Medical Center,243 Main St,,,Seattle,WA,98101,King,3436431143,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10144,Phoenix Regional Medical Center,244 Main St,,,Phoenix,AZ,85001,Maricopa,3446441144,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10145,Chicago Regional Medical Center,245 Main St,,,Chicago,IL,60601,Cook,3456451145,Acute Care Hospitals,Government-Federal,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10146,Boston Regional Medical Center,246 Main St,,,Boston,MA,02108,Suffolk,3466461146,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10147,Austin Regional Medical Center,247 Main St,,,Austin,TX,78701,Travis,3476471147,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10148,Seattle Regional Medical Center,248 Main St,,,Seattle,WA,98101,King,3486481148,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10149,Phoenix Regional Medical Center,249 Main St,,,Phoenix,AZ,85001,Maricopa,3496491149,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10150,Chicago Regional Medical Center,250 Main St,,,Chicago,IL,60601,Cook,3506501150,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10151,Boston Regional Medical Center,251 Main St,,,Boston,MA,02108,Suffolk,3516511151,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10152,Austin Regional Medical Center,252 Main St,,,Austin,TX,78701,Travis,3526521152,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10153,Seattle Regional Medical Center,253 Main St,,,Seattle,WA,98101,King,3536531153,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10154,Phoenix Regional Medical Center,254 Main St,,,Phoenix,AZ,85001,Maricopa,3546541154,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10155,Chicago Regional Medical Center,255 Main St,,,Chicago,IL,60601,Cook,3556551155,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10156,Boston Regional Medical Center,256 Main St,,,Boston,MA,02108,Suffolk,3566561156,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10157,Austin Regional Medical Center,257 Main St,,,Austin,TX,78701,Travis,3576571157,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10158,Seattle Regional Medical Center,258 Main St,,,Seattle,WA,98101,King,3586581158,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10159,Phoenix Regional Medical Center,259 Main St,,,Phoenix,AZ,85001,Maricopa,3596591159,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10160,Chicago Regional Medical Center,260 Main St,,,Chicago,IL,60601,Cook,3606601160,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10161,Boston Regional Medical Center,261 Main St,,,Boston,MA,02108,Suffolk,3616611161,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10162,Austin Regional Medical Center,262 Main St,,,Austin,TX,78701,Travis,3626621162,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10163,Seattle Regional Medical Center,263 Main St,,,Seattle,WA,98101,King,3636631163,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10164,Phoenix Regional Medical Center,264 Main St,,,Phoenix,AZ,85001,Maricopa,3646641164,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10165,Chicago Regional Medical Center,265 Main St,,,Chicago,IL,60601,Cook,3656651165,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10166,Boston Regional Medical Center,266 Main St,,,Boston,MA,02108,Suffolk,3666661166,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10167,Austin Regional Medical Center,267 Main St,,,Austin,TX,78701,Travis,3676671167,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10168,Seattle Regional Medical Center,268 Main St,,,Seattle,WA,98101,King,3686681168,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10169,Phoenix Regional Medical Center,269 Main St,,,Phoenix,AZ,85001,Maricopa,3696691169,Acute Care Hospitals,Government - State,Yes,Heart Failure,HF_1,30-day mortality,12.0,180,13
+10170,Chicago Regional Medical Center,270 Main St,,,Chicago,IL,60601,Cook,3706701170,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,PN_1,30-day mortality,14.0,210,15
+10171,Boston Regional Medical Center,271 Main St,,,Boston,MA,02108,Suffolk,3716711171,Acute Care Hospitals,Proprietary,Yes,Surgical Care,AMI_1,30-day mortality,15.0,200,16
+10172,Austin Regional Medical Center,272 Main St,,,Austin,TX,78701,Travis,3726721172,Acute Care Hospitals,Government - Federal,No,Heart Attack,HF_1,30-day mortality,12.0,180,13
+10173,Seattle Regional Medical Center,273 Main St,,,Seattle,WA,98101,King,3736731173,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10174,Phoenix Regional Medical Center,274 Main St,,,Phoenix,AZ,85001,Maricopa,3746741174,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,AMI_1,30-day mortality,15.0,200,16
+10175,Chicago Regional Medical Center,275 Main St,,,Chicago,IL,60601,Cook,3756751175,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13
+10176,Boston Regional Medical Center,276 Main St,,,Boston,MA,02108,Suffolk,3766761176,Acute Care Hospitals,Government - Federal,No,Heart Attack,PN_1,30-day mortality,14.0,210,15
+10177,Austin Regional Medical Center,277 Main St,,,Austin,TX,78701,Travis,3776771177,Acute Care Hospitals,Government - State,Yes,Heart Failure,AMI_1,30-day mortality,15.0,200,16
+10178,Seattle Regional Medical Center,278 Main St,,,Seattle,WA,98101,King,3786781178,Acute Care Hospitals,Voluntary non-profit,Yes,Pneumonia,HF_1,30-day mortality,12.0,180,13
+10179,Phoenix Regional Medical Center,279 Main St,,,Phoenix,AZ,85001,Maricopa,3796791179,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10180,Chicago Regional Medical Center,280 Main St,,,Chicago,IL,60601,Cook,3806801180,Acute Care Hospitals,Government - Federal,No,Heart Attack,AMI_1,30-day mortality,15.0,200,16
+10181,Boston Regional Medical Center,111 Main St,,,Boston,MA,02108,Suffolk,2115111011,Acute Care Hospitals,Proprietary,Yes,Surgical Care,PN_1,30-day mortality,14.0,210,15
+10182,Boston Regional Medical Center,141 Main St,,,Boston,MA,02108,Suffolk,2415411041,Acute Care Hospitals,Government - State,Yes,Heart Failure,PN_1,30-day mortality,14.0,210,15
+10183,Boston Regional Medical Center,191 Main St,,,Boston,MA,02108,Suffolk,2915911091,Acute Care Hospitals,Proprietary,Yes,Surgical Care,HF_1,30-day mortality,12.0,180,13

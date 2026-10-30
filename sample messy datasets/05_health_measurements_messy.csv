@@ -1,0 +1,6 @@
+record_id,person,age,weight,height,temperature,blood_pressure
+1,Patient A,25.0,70 kg,175 cm,98.6 F,120/80
+2,Patient B,-3.0,154 lb,1.72 m,37 C,130/85
+3,Patient C,130.0,68000 g,1650 mm,98.6 F,140/90
+4,Patient D,42.0,72 kg,180 cm,bad temp,unknown
+5,Patient E,,70 kg,175 cm,36.5 Celsius,125/82

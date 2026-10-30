@@ -1,0 +1,7 @@
+transaction_id,date,customer_id,city,country,quantity,amount,shipping_weight
+T001,2026-01-01, CUST001 ,Mumbai,India,5,"₹1,200",2 kg
+T002,01/02/2026,CUST002,Pune,India,-3,1500,500 g
+T003,2026-03-01,CUST003,Mumbai,France,10,"$2,500",1 kg
+T004,bad-date,CUST004,Delhi,India,abc,₹900,750 g
+T005,2026-05-01,CUST005,Paris,France,4,€300,2 kg
+T005,2026-05-01,CUST005,Paris,France,4,€300,2 kg

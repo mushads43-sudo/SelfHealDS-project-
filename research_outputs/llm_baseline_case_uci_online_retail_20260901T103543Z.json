@@ -1,0 +1,6131 @@
+{
+  "generated_at": "2026-09-01T10:35:43.541500+00:00",
+  "experiment": "E10 \u2014 LLM baseline comparison",
+  "llm_eval_version": "2026.09-llm-baseline-v1",
+  "selfhealds_eval_version": "2026.08-eval-v3",
+  "reference_label": "case:uci_online_retail",
+  "reference_fingerprint": "a3ad68e07de30fc8",
+  "corruption_rate": 0.1,
+  "seed": 42,
+  "injected_cases": 481,
+  "row_cap": 300,
+  "row_cap_applied": true,
+  "rows_sent_to_llm": 300,
+  "model": "claude.ai free tier",
+  "selfhealds_evaluation": {
+    "generated_at": "2026-09-01T10:35:43.528379+00:00",
+    "evaluation_version": "2026.08-eval-v3",
+    "dataset_fingerprint": "a3ad68e07de30fc8",
+    "benchmark_reference_fingerprint": "a3ad68e07de30fc8",
+    "reference_mode": "uploaded_reference_no_preclean",
+    "preexisting_rows_excluded": 0,
+    "corruption_rate": 0.1,
+    "seed": 42,
+    "actual_corruption_cases": 481,
+    "obvious_cases": 253,
+    "plausible_cases": 228,
+    "ground_truth": [
+      {
+        "row": 712,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 415,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "18/01/2011 08:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "18/01/2011 08:00"
+      },
+      {
+        "row": 816,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "04/02/2011 01:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "04/02/2011 01:00"
+      },
+      {
+        "row": 1184,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "19/02/2011 09:00",
+        "corrupted_value": "2011-02-20",
+        "expected_repair": "19/02/2011 09:00"
+      },
+      {
+        "row": 1170,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 148,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "1",
+        "corrupted_value": 2.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 395,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 1095,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 839,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 498,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "21/01/2011 19:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "21/01/2011 19:00"
+      },
+      {
+        "row": 643,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "27/01/2011 20:00",
+        "corrupted_value": "2011-01-28",
+        "expected_repair": "27/01/2011 20:00"
+      },
+      {
+        "row": 457,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "20/01/2011 02:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "20/01/2011 02:00"
+      },
+      {
+        "row": 453,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 728,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 11,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 1009,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "12/02/2011 02:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "12/02/2011 02:00"
+      },
+      {
+        "row": 374,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 358,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "1",
+        "corrupted_value": 2.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 443,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "19/01/2011 12:00",
+        "corrupted_value": "2011-01-20",
+        "expected_repair": "19/01/2011 12:00"
+      },
+      {
+        "row": 56,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 240,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 160,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "07/01/2011 17:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "07/01/2011 17:00"
+      },
+      {
+        "row": 172,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 1076,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 799,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "4",
+        "corrupted_value": -4.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 409,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 107,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "05/01/2011 12:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "05/01/2011 12:00"
+      },
+      {
+        "row": 229,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 73,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 554,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 962,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 1088,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "15/02/2011 09:00",
+        "corrupted_value": "2011-02-16",
+        "expected_repair": "15/02/2011 09:00"
+      },
+      {
+        "row": 348,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "15/01/2011 13:00",
+        "corrupted_value": "2011-01-16",
+        "expected_repair": "15/01/2011 13:00"
+      },
+      {
+        "row": 953,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "09/02/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "09/02/2011 18:00"
+      },
+      {
+        "row": 49,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 31,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "02/01/2011 08:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "02/01/2011 08:00"
+      },
+      {
+        "row": 29,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 797,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 964,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "10/02/2011 05:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "10/02/2011 05:00"
+      },
+      {
+        "row": 679,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "8",
+        "corrupted_value": 9.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 1108,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 1073,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 372,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "16/01/2011 13:00",
+        "corrupted_value": "2011-01-17",
+        "expected_repair": "16/01/2011 13:00"
+      },
+      {
+        "row": 831,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 1171,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 2,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 903,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "07/02/2011 16:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "07/02/2011 16:00"
+      },
+      {
+        "row": 615,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 419,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 189,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "08/01/2011 22:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "08/01/2011 22:00"
+      },
+      {
+        "row": 431,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "19/01/2011 00:00",
+        "corrupted_value": "2011-01-20",
+        "expected_repair": "19/01/2011 00:00"
+      },
+      {
+        "row": 406,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 1158,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "18/02/2011 07:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "18/02/2011 07:00"
+      },
+      {
+        "row": 568,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "24/01/2011 17:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "24/01/2011 17:00"
+      },
+      {
+        "row": 135,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "06/01/2011 16:00",
+        "corrupted_value": "2011-06-02",
+        "expected_repair": "06/01/2011 16:00"
+      },
+      {
+        "row": 342,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 463,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 29,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "02/01/2011 06:00",
+        "corrupted_value": "2011-02-02",
+        "expected_repair": "02/01/2011 06:00"
+      },
+      {
+        "row": 36,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "02/01/2011 13:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "02/01/2011 13:00"
+      },
+      {
+        "row": 499,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "21/01/2011 20:00",
+        "corrupted_value": "2011-01-22",
+        "expected_repair": "21/01/2011 20:00"
+      },
+      {
+        "row": 535,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "23/01/2011 08:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "23/01/2011 08:00"
+      },
+      {
+        "row": 575,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "25/01/2011 00:00",
+        "corrupted_value": "2011-01-26",
+        "expected_repair": "25/01/2011 00:00"
+      },
+      {
+        "row": 802,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "03/02/2011 11:00",
+        "corrupted_value": "2011-03-03",
+        "expected_repair": "03/02/2011 11:00"
+      },
+      {
+        "row": 1008,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "12/02/2011 01:00",
+        "corrupted_value": "2011-12-03",
+        "expected_repair": "12/02/2011 01:00"
+      },
+      {
+        "row": 1,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "01/01/2011 02:00",
+        "corrupted_value": "2011-01-02",
+        "expected_repair": "01/01/2011 02:00"
+      },
+      {
+        "row": 1031,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "13/02/2011 00:00",
+        "corrupted_value": "2011-02-14",
+        "expected_repair": "13/02/2011 00:00"
+      },
+      {
+        "row": 171,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 310,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "13/01/2011 23:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "13/01/2011 23:00"
+      },
+      {
+        "row": 541,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 1101,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "15/02/2011 22:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "15/02/2011 22:00"
+      },
+      {
+        "row": 307,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 215,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 507,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "22/01/2011 04:00",
+        "corrupted_value": "2011-01-23",
+        "expected_repair": "22/01/2011 04:00"
+      },
+      {
+        "row": 916,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 185,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "08/01/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "08/01/2011 18:00"
+      },
+      {
+        "row": 173,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 688,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "29/01/2011 17:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "29/01/2011 17:00"
+      },
+      {
+        "row": 547,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 11,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "01/01/2011 12:00",
+        "corrupted_value": "2011-01-02",
+        "expected_repair": "01/01/2011 12:00"
+      },
+      {
+        "row": 876,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 334,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "14/01/2011 23:00",
+        "corrupted_value": "2011-01-15",
+        "expected_repair": "14/01/2011 23:00"
+      },
+      {
+        "row": 964,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "1",
+        "corrupted_value": 2.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 966,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "10/02/2011 07:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "10/02/2011 07:00"
+      },
+      {
+        "row": 815,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "04/02/2011 00:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "04/02/2011 00:00"
+      },
+      {
+        "row": 1174,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 1085,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 295,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 779,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "02/02/2011 12:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "02/02/2011 12:00"
+      },
+      {
+        "row": 1066,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "14/02/2011 11:00",
+        "corrupted_value": "2011-02-15",
+        "expected_repair": "14/02/2011 11:00"
+      },
+      {
+        "row": 1197,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "19/02/2011 22:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "19/02/2011 22:00"
+      },
+      {
+        "row": 55,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 1027,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 688,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "-6",
+        "corrupted_value": -6.0,
+        "expected_repair": -6.0
+      },
+      {
+        "row": 74,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 10,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 399,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "8",
+        "corrupted_value": 9.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 545,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "23/01/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "23/01/2011 18:00"
+      },
+      {
+        "row": 276,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 1122,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "16/02/2011 19:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "16/02/2011 19:00"
+      },
+      {
+        "row": 192,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 1058,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 869,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "06/02/2011 06:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "06/02/2011 06:00"
+      },
+      {
+        "row": 1052,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 1118,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 596,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "25/01/2011 21:00",
+        "corrupted_value": "2011-01-26",
+        "expected_repair": "25/01/2011 21:00"
+      },
+      {
+        "row": 1132,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "17/02/2011 05:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "17/02/2011 05:00"
+      },
+      {
+        "row": 631,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "27/01/2011 08:00",
+        "corrupted_value": "2011-01-28",
+        "expected_repair": "27/01/2011 08:00"
+      },
+      {
+        "row": 252,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 87,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "04/01/2011 16:00",
+        "corrupted_value": "2011-04-02",
+        "expected_repair": "04/01/2011 16:00"
+      },
+      {
+        "row": 1089,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 888,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 70,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "03/01/2011 23:00",
+        "corrupted_value": "2011-03-02",
+        "expected_repair": "03/01/2011 23:00"
+      },
+      {
+        "row": 718,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 836,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 1034,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "13/02/2011 03:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "13/02/2011 03:00"
+      },
+      {
+        "row": 388,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 272,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "12/01/2011 09:00",
+        "corrupted_value": "2011-12-02",
+        "expected_repair": "12/01/2011 09:00"
+      },
+      {
+        "row": 924,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "08/02/2011 13:00",
+        "corrupted_value": "2011-08-03",
+        "expected_repair": "08/02/2011 13:00"
+      },
+      {
+        "row": 234,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "10/01/2011 19:00",
+        "corrupted_value": "2011-10-02",
+        "expected_repair": "10/01/2011 19:00"
+      },
+      {
+        "row": 786,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 515,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 732,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 472,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 542,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "23/01/2011 15:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "23/01/2011 15:00"
+      },
+      {
+        "row": 1087,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "15/02/2011 08:00",
+        "corrupted_value": "2011-02-16",
+        "expected_repair": "15/02/2011 08:00"
+      },
+      {
+        "row": 1168,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 873,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "06/02/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "06/02/2011 10:00"
+      },
+      {
+        "row": 750,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "01/02/2011 07:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "01/02/2011 07:00"
+      },
+      {
+        "row": 989,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "11/02/2011 06:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "11/02/2011 06:00"
+      },
+      {
+        "row": 318,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "14/01/2011 07:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "14/01/2011 07:00"
+      },
+      {
+        "row": 1015,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "12/02/2011 08:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "12/02/2011 08:00"
+      },
+      {
+        "row": 952,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "09/02/2011 17:00",
+        "corrupted_value": "2011-09-03",
+        "expected_repair": "09/02/2011 17:00"
+      },
+      {
+        "row": 1115,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 1021,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 1145,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "17/02/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "17/02/2011 18:00"
+      },
+      {
+        "row": 502,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 551,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 927,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "08/02/2011 16:00",
+        "corrupted_value": "2011-08-03",
+        "expected_repair": "08/02/2011 16:00"
+      },
+      {
+        "row": 650,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 214,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 953,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "-4",
+        "corrupted_value": -4.0,
+        "expected_repair": -4.0
+      },
+      {
+        "row": 383,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "17/01/2011 00:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "17/01/2011 00:00"
+      },
+      {
+        "row": 1174,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "18/02/2011 23:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "18/02/2011 23:00"
+      },
+      {
+        "row": 175,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 1019,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "12/02/2011 12:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "12/02/2011 12:00"
+      },
+      {
+        "row": 685,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "29/01/2011 14:00",
+        "corrupted_value": "2011-01-30",
+        "expected_repair": "29/01/2011 14:00"
+      },
+      {
+        "row": 209,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "09/01/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "09/01/2011 18:00"
+      },
+      {
+        "row": 182,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 1078,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "14/02/2011 23:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "14/02/2011 23:00"
+      },
+      {
+        "row": 92,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "04/01/2011 21:00",
+        "corrupted_value": "2011-04-02",
+        "expected_repair": "04/01/2011 21:00"
+      },
+      {
+        "row": 237,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 362,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 710,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "30/01/2011 15:00",
+        "corrupted_value": "2011-01-31",
+        "expected_repair": "30/01/2011 15:00"
+      },
+      {
+        "row": 232,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "10/01/2011 17:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "10/01/2011 17:00"
+      },
+      {
+        "row": 319,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 357,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "15/01/2011 22:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "15/01/2011 22:00"
+      },
+      {
+        "row": 222,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "10/01/2011 07:00",
+        "corrupted_value": "2011-10-02",
+        "expected_repair": "10/01/2011 07:00"
+      },
+      {
+        "row": 319,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "14/01/2011 08:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "14/01/2011 08:00"
+      },
+      {
+        "row": 1071,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "14/02/2011 16:00",
+        "corrupted_value": "2011-02-15",
+        "expected_repair": "14/02/2011 16:00"
+      },
+      {
+        "row": 408,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "18/01/2011 01:00",
+        "corrupted_value": "2011-01-19",
+        "expected_repair": "18/01/2011 01:00"
+      },
+      {
+        "row": 476,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "-6",
+        "corrupted_value": -6.0,
+        "expected_repair": -6.0
+      },
+      {
+        "row": 1137,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "17/02/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "17/02/2011 10:00"
+      },
+      {
+        "row": 879,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 254,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "11/01/2011 15:00",
+        "corrupted_value": "2011-11-02",
+        "expected_repair": "11/01/2011 15:00"
+      },
+      {
+        "row": 835,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "04/02/2011 20:00",
+        "corrupted_value": "2011-04-03",
+        "expected_repair": "04/02/2011 20:00"
+      },
+      {
+        "row": 201,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 451,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "19/01/2011 20:00",
+        "corrupted_value": "2011-01-20",
+        "expected_repair": "19/01/2011 20:00"
+      },
+      {
+        "row": 679,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "29/01/2011 08:00",
+        "corrupted_value": "2011-01-30",
+        "expected_repair": "29/01/2011 08:00"
+      },
+      {
+        "row": 109,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "05/01/2011 14:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "05/01/2011 14:00"
+      },
+      {
+        "row": 41,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "02/01/2011 18:00",
+        "corrupted_value": "2011-02-02",
+        "expected_repair": "02/01/2011 18:00"
+      },
+      {
+        "row": 518,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "22/01/2011 15:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "22/01/2011 15:00"
+      },
+      {
+        "row": 394,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "17/01/2011 11:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "17/01/2011 11:00"
+      },
+      {
+        "row": 248,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "11/01/2011 09:00",
+        "corrupted_value": "2011-11-02",
+        "expected_repair": "11/01/2011 09:00"
+      },
+      {
+        "row": 997,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 1061,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "14/02/2011 06:00",
+        "corrupted_value": "2011-02-15",
+        "expected_repair": "14/02/2011 06:00"
+      },
+      {
+        "row": 637,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 269,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 253,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 103,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "05/01/2011 08:00",
+        "corrupted_value": "2011-05-02",
+        "expected_repair": "05/01/2011 08:00"
+      },
+      {
+        "row": 824,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 311,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "14/01/2011 00:00",
+        "corrupted_value": "2011-01-15",
+        "expected_repair": "14/01/2011 00:00"
+      },
+      {
+        "row": 76,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 458,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "20/01/2011 03:00",
+        "corrupted_value": "2011-01-21",
+        "expected_repair": "20/01/2011 03:00"
+      },
+      {
+        "row": 139,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "06/01/2011 20:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "06/01/2011 20:00"
+      },
+      {
+        "row": 804,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "03/02/2011 13:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "03/02/2011 13:00"
+      },
+      {
+        "row": 1020,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "12/02/2011 13:00",
+        "corrupted_value": "2011-12-03",
+        "expected_repair": "12/02/2011 13:00"
+      },
+      {
+        "row": 275,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "12/01/2011 12:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "12/01/2011 12:00"
+      },
+      {
+        "row": 528,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "23/01/2011 01:00",
+        "corrupted_value": "2011-01-24",
+        "expected_repair": "23/01/2011 01:00"
+      },
+      {
+        "row": 1054,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 1161,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "4",
+        "corrupted_value": -4.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 1175,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "19/02/2011 00:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "19/02/2011 00:00"
+      },
+      {
+        "row": 996,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 1155,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "18/02/2011 04:00",
+        "corrupted_value": "2011-02-19",
+        "expected_repair": "18/02/2011 04:00"
+      },
+      {
+        "row": 924,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 340,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 722,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "31/01/2011 03:00",
+        "corrupted_value": "2011-02-01",
+        "expected_repair": "31/01/2011 03:00"
+      },
+      {
+        "row": 1134,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 742,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "31/01/2011 23:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "31/01/2011 23:00"
+      },
+      {
+        "row": 819,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 183,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 1132,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 495,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 700,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "30/01/2011 05:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "30/01/2011 05:00"
+      },
+      {
+        "row": 850,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 767,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "1",
+        "corrupted_value": 2.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 463,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "20/01/2011 08:00",
+        "corrupted_value": "2011-01-21",
+        "expected_repair": "20/01/2011 08:00"
+      },
+      {
+        "row": 1193,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "19/02/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "19/02/2011 18:00"
+      },
+      {
+        "row": 351,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 282,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 445,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "19/01/2011 14:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "19/01/2011 14:00"
+      },
+      {
+        "row": 556,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "24/01/2011 05:00",
+        "corrupted_value": "2011-01-25",
+        "expected_repair": "24/01/2011 05:00"
+      },
+      {
+        "row": 524,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 1016,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "12/02/2011 09:00",
+        "corrupted_value": "2011-12-03",
+        "expected_repair": "12/02/2011 09:00"
+      },
+      {
+        "row": 10,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "01/01/2011 11:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "01/01/2011 11:00"
+      },
+      {
+        "row": 19,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "01/01/2011 20:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "01/01/2011 20:00"
+      },
+      {
+        "row": 73,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "04/01/2011 02:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "04/01/2011 02:00"
+      },
+      {
+        "row": 375,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "16/01/2011 16:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "16/01/2011 16:00"
+      },
+      {
+        "row": 1107,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "16/02/2011 04:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "16/02/2011 04:00"
+      },
+      {
+        "row": 323,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 850,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "05/02/2011 11:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "05/02/2011 11:00"
+      },
+      {
+        "row": 735,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "31/01/2011 16:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "31/01/2011 16:00"
+      },
+      {
+        "row": 1039,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "13/02/2011 08:00",
+        "corrupted_value": "2011-02-14",
+        "expected_repair": "13/02/2011 08:00"
+      },
+      {
+        "row": 753,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "01/02/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "01/02/2011 10:00"
+      },
+      {
+        "row": 773,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 305,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 469,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "20/01/2011 14:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "20/01/2011 14:00"
+      },
+      {
+        "row": 289,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 558,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 1182,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "19/02/2011 07:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "19/02/2011 07:00"
+      },
+      {
+        "row": 257,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "11/01/2011 18:00",
+        "corrupted_value": "2011-11-02",
+        "expected_repair": "11/01/2011 18:00"
+      },
+      {
+        "row": 170,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "08/01/2011 03:00",
+        "corrupted_value": "2011-08-02",
+        "expected_repair": "08/01/2011 03:00"
+      },
+      {
+        "row": 1145,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 290,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "13/01/2011 03:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "13/01/2011 03:00"
+      },
+      {
+        "row": 1105,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "16/02/2011 02:00",
+        "corrupted_value": "2011-02-17",
+        "expected_repair": "16/02/2011 02:00"
+      },
+      {
+        "row": 20,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "01/01/2011 21:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "01/01/2011 21:00"
+      },
+      {
+        "row": 106,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 190,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 594,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 987,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "11/02/2011 04:00",
+        "corrupted_value": "2011-11-03",
+        "expected_repair": "11/02/2011 04:00"
+      },
+      {
+        "row": 897,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "07/02/2011 10:00",
+        "corrupted_value": "2011-07-03",
+        "expected_repair": "07/02/2011 10:00"
+      },
+      {
+        "row": 606,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "1",
+        "corrupted_value": 2.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 946,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 1096,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "15/02/2011 17:00",
+        "corrupted_value": "2011-02-16",
+        "expected_repair": "15/02/2011 17:00"
+      },
+      {
+        "row": 584,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "25/01/2011 09:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "25/01/2011 09:00"
+      },
+      {
+        "row": 61,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "03/01/2011 14:00",
+        "corrupted_value": "2011-03-02",
+        "expected_repair": "03/01/2011 14:00"
+      },
+      {
+        "row": 206,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 133,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 1113,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 40,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "02/01/2011 17:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "02/01/2011 17:00"
+      },
+      {
+        "row": 974,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 674,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "29/01/2011 03:00",
+        "corrupted_value": "2011-01-30",
+        "expected_repair": "29/01/2011 03:00"
+      },
+      {
+        "row": 1150,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 106,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "05/01/2011 11:00",
+        "corrupted_value": "2011-05-02",
+        "expected_repair": "05/01/2011 11:00"
+      },
+      {
+        "row": 801,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 839,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "05/02/2011 00:00",
+        "corrupted_value": "2011-05-03",
+        "expected_repair": "05/02/2011 00:00"
+      },
+      {
+        "row": 169,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 1128,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "17/02/2011 01:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "17/02/2011 01:00"
+      },
+      {
+        "row": 338,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "15/01/2011 03:00",
+        "corrupted_value": "2011-01-16",
+        "expected_repair": "15/01/2011 03:00"
+      },
+      {
+        "row": 714,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "30/01/2011 19:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "30/01/2011 19:00"
+      },
+      {
+        "row": 84,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 297,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "13/01/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "13/01/2011 10:00"
+      },
+      {
+        "row": 905,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "07/02/2011 18:00",
+        "corrupted_value": "2011-07-03",
+        "expected_repair": "07/02/2011 18:00"
+      },
+      {
+        "row": 682,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "4",
+        "corrupted_value": -4.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 529,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "23/01/2011 02:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "23/01/2011 02:00"
+      },
+      {
+        "row": 993,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "11/02/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "11/02/2011 10:00"
+      },
+      {
+        "row": 648,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 187,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "08/01/2011 20:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "08/01/2011 20:00"
+      },
+      {
+        "row": 18,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "8",
+        "corrupted_value": 9.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 864,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 1116,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "16/02/2011 13:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "16/02/2011 13:00"
+      },
+      {
+        "row": 523,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "1",
+        "corrupted_value": 2.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 112,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 17,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "01/01/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "01/01/2011 18:00"
+      },
+      {
+        "row": 859,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "05/02/2011 20:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "05/02/2011 20:00"
+      },
+      {
+        "row": 910,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "07/02/2011 23:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "07/02/2011 23:00"
+      },
+      {
+        "row": 733,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 1155,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 841,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "05/02/2011 02:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "05/02/2011 02:00"
+      },
+      {
+        "row": 1162,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 15,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 64,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 225,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "10/01/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "10/01/2011 10:00"
+      },
+      {
+        "row": 608,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "26/01/2011 09:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "26/01/2011 09:00"
+      },
+      {
+        "row": 9,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 950,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "09/02/2011 15:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "09/02/2011 15:00"
+      },
+      {
+        "row": 410,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "18/01/2011 03:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "18/01/2011 03:00"
+      },
+      {
+        "row": 223,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 383,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 759,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 588,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 1181,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 582,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "-6",
+        "corrupted_value": -6.0,
+        "expected_repair": -6.0
+      },
+      {
+        "row": 804,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 343,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "15/01/2011 08:00",
+        "corrupted_value": "2011-01-16",
+        "expected_repair": "15/01/2011 08:00"
+      },
+      {
+        "row": 334,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 80,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 345,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "15/01/2011 10:00",
+        "corrupted_value": "2011-01-16",
+        "expected_repair": "15/01/2011 10:00"
+      },
+      {
+        "row": 398,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "17/01/2011 15:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "17/01/2011 15:00"
+      },
+      {
+        "row": 1044,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 1096,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "1",
+        "corrupted_value": 2.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 626,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 16,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 417,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 644,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "27/01/2011 21:00",
+        "corrupted_value": "2011-01-28",
+        "expected_repair": "27/01/2011 21:00"
+      },
+      {
+        "row": 180,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "08/01/2011 13:00",
+        "corrupted_value": "2011-08-02",
+        "expected_repair": "08/01/2011 13:00"
+      },
+      {
+        "row": 801,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "03/02/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "03/02/2011 10:00"
+      },
+      {
+        "row": 969,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 872,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 1178,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "19/02/2011 03:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "19/02/2011 03:00"
+      },
+      {
+        "row": 553,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 1152,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "18/02/2011 01:00",
+        "corrupted_value": "2011-02-19",
+        "expected_repair": "18/02/2011 01:00"
+      },
+      {
+        "row": 622,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "26/01/2011 23:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "26/01/2011 23:00"
+      },
+      {
+        "row": 257,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 425,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 593,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "25/01/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "25/01/2011 18:00"
+      },
+      {
+        "row": 24,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 940,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 422,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 1046,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 49,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "03/01/2011 02:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "03/01/2011 02:00"
+      },
+      {
+        "row": 544,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "23/01/2011 17:00",
+        "corrupted_value": "2011-01-24",
+        "expected_repair": "23/01/2011 17:00"
+      },
+      {
+        "row": 104,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 363,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "3",
+        "corrupted_value": 4.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 240,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "11/01/2011 01:00",
+        "corrupted_value": "2011-11-02",
+        "expected_repair": "11/01/2011 01:00"
+      },
+      {
+        "row": 452,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 435,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 570,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "24/01/2011 19:00",
+        "corrupted_value": "2011-01-25",
+        "expected_repair": "24/01/2011 19:00"
+      },
+      {
+        "row": 246,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 889,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 830,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 1102,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "15/02/2011 23:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "15/02/2011 23:00"
+      },
+      {
+        "row": 387,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 754,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "01/02/2011 11:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "01/02/2011 11:00"
+      },
+      {
+        "row": 681,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "29/01/2011 10:00",
+        "corrupted_value": "2011-01-30",
+        "expected_repair": "29/01/2011 10:00"
+      },
+      {
+        "row": 610,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "26/01/2011 11:00",
+        "corrupted_value": "2011-01-27",
+        "expected_repair": "26/01/2011 11:00"
+      },
+      {
+        "row": 971,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 193,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "09/01/2011 02:00",
+        "corrupted_value": "2011-09-02",
+        "expected_repair": "09/01/2011 02:00"
+      },
+      {
+        "row": 98,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "05/01/2011 03:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "05/01/2011 03:00"
+      },
+      {
+        "row": 424,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 137,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "06/01/2011 18:00",
+        "corrupted_value": "2011-06-02",
+        "expected_repair": "06/01/2011 18:00"
+      },
+      {
+        "row": 268,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "12/01/2011 05:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "12/01/2011 05:00"
+      },
+      {
+        "row": 242,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 853,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "05/02/2011 14:00",
+        "corrupted_value": "2011-05-03",
+        "expected_repair": "05/02/2011 14:00"
+      },
+      {
+        "row": 941,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 756,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "1",
+        "corrupted_value": 2.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 922,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "08/02/2011 11:00",
+        "corrupted_value": "2011-08-03",
+        "expected_repair": "08/02/2011 11:00"
+      },
+      {
+        "row": 510,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "22/01/2011 07:00",
+        "corrupted_value": "2011-01-23",
+        "expected_repair": "22/01/2011 07:00"
+      },
+      {
+        "row": 661,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 280,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "12/01/2011 17:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "12/01/2011 17:00"
+      },
+      {
+        "row": 971,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "10/02/2011 12:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "10/02/2011 12:00"
+      },
+      {
+        "row": 150,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 707,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 618,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "26/01/2011 19:00",
+        "corrupted_value": "2011-01-27",
+        "expected_repair": "26/01/2011 19:00"
+      },
+      {
+        "row": 645,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "27/01/2011 22:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "27/01/2011 22:00"
+      },
+      {
+        "row": 181,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "08/01/2011 14:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "08/01/2011 14:00"
+      },
+      {
+        "row": 13,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 335,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "15/01/2011 00:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "15/01/2011 00:00"
+      },
+      {
+        "row": 972,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "10/02/2011 13:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "10/02/2011 13:00"
+      },
+      {
+        "row": 662,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "28/01/2011 15:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "28/01/2011 15:00"
+      },
+      {
+        "row": 947,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "09/02/2011 12:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "09/02/2011 12:00"
+      },
+      {
+        "row": 669,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "28/01/2011 22:00",
+        "corrupted_value": "2011-01-29",
+        "expected_repair": "28/01/2011 22:00"
+      },
+      {
+        "row": 635,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "-4",
+        "corrupted_value": -4.0,
+        "expected_repair": -4.0
+      },
+      {
+        "row": 381,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 1131,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 1175,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 745,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "01/02/2011 02:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "01/02/2011 02:00"
+      },
+      {
+        "row": 812,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "03/02/2011 21:00",
+        "corrupted_value": "2011-03-03",
+        "expected_repair": "03/02/2011 21:00"
+      },
+      {
+        "row": 435,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "19/01/2011 04:00",
+        "corrupted_value": "2011-01-20",
+        "expected_repair": "19/01/2011 04:00"
+      },
+      {
+        "row": 749,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "4",
+        "corrupted_value": -4.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 963,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "10/02/2011 04:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "10/02/2011 04:00"
+      },
+      {
+        "row": 1169,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "18/02/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "18/02/2011 18:00"
+      },
+      {
+        "row": 265,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 717,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 1050,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "4",
+        "corrupted_value": -4.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 404,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 474,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "1",
+        "corrupted_value": 2.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 482,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "21/01/2011 03:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "21/01/2011 03:00"
+      },
+      {
+        "row": 328,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 668,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "28/01/2011 21:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "28/01/2011 21:00"
+      },
+      {
+        "row": 864,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "06/02/2011 01:00",
+        "corrupted_value": "2011-06-03",
+        "expected_repair": "06/02/2011 01:00"
+      },
+      {
+        "row": 975,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "10/02/2011 16:00",
+        "corrupted_value": "2011-10-03",
+        "expected_repair": "10/02/2011 16:00"
+      },
+      {
+        "row": 829,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 651,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "28/01/2011 04:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "28/01/2011 04:00"
+      },
+      {
+        "row": 443,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "9",
+        "corrupted_value": 10.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 254,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "8",
+        "corrupted_value": 9.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 287,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 1026,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "12/02/2011 19:00",
+        "corrupted_value": "2011-12-03",
+        "expected_repair": "12/02/2011 19:00"
+      },
+      {
+        "row": 164,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 1172,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "18/02/2011 21:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "18/02/2011 21:00"
+      },
+      {
+        "row": 761,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "01/02/2011 18:00",
+        "corrupted_value": "2011-01-03",
+        "expected_repair": "01/02/2011 18:00"
+      },
+      {
+        "row": 365,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 820,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 884,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "06/02/2011 21:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "06/02/2011 21:00"
+      },
+      {
+        "row": 308,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "6",
+        "corrupted_value": -6.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 489,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "4",
+        "corrupted_value": -4.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 228,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "10/01/2011 13:00",
+        "corrupted_value": "2011-10-02",
+        "expected_repair": "10/01/2011 13:00"
+      },
+      {
+        "row": 687,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "9",
+        "corrupted_value": -9.0,
+        "expected_repair": 9.0
+      },
+      {
+        "row": 657,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "2",
+        "corrupted_value": 3.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 999,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "8",
+        "corrupted_value": 9.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 1157,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 193,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "4",
+        "corrupted_value": 5.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 777,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "02/02/2011 10:00",
+        "corrupted_value": "2011-02-03",
+        "expected_repair": "02/02/2011 10:00"
+      },
+      {
+        "row": 75,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 202,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "6",
+        "corrupted_value": 7.0,
+        "expected_repair": 6.0
+      },
+      {
+        "row": 176,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 404,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "17/01/2011 21:00",
+        "corrupted_value": "2011-01-18",
+        "expected_repair": "17/01/2011 21:00"
+      },
+      {
+        "row": 995,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "11/02/2011 12:00",
+        "corrupted_value": "2011-11-03",
+        "expected_repair": "11/02/2011 12:00"
+      },
+      {
+        "row": 62,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "03/01/2011 15:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "03/01/2011 15:00"
+      },
+      {
+        "row": 887,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "8",
+        "corrupted_value": 9.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 430,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "18/01/2011 23:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "18/01/2011 23:00"
+      },
+      {
+        "row": 3,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "01/01/2011 04:00",
+        "corrupted_value": "2011-01-02",
+        "expected_repair": "01/01/2011 04:00"
+      },
+      {
+        "row": 726,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 1037,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "13/02/2011 06:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "13/02/2011 06:00"
+      },
+      {
+        "row": 770,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "02/02/2011 03:00",
+        "corrupted_value": "2011-02-03",
+        "expected_repair": "02/02/2011 03:00"
+      },
+      {
+        "row": 1140,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 286,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "3",
+        "corrupted_value": -3.0,
+        "expected_repair": 3.0
+      },
+      {
+        "row": 119,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "06/01/2011 00:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "06/01/2011 00:00"
+      },
+      {
+        "row": 925,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "08/02/2011 14:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "08/02/2011 14:00"
+      },
+      {
+        "row": 217,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 25,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "8",
+        "corrupted_value": 9.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 657,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "28/01/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "28/01/2011 10:00"
+      },
+      {
+        "row": 330,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "14/01/2011 19:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "14/01/2011 19:00"
+      },
+      {
+        "row": 361,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "16/01/2011 02:00",
+        "corrupted_value": "2011-01-17",
+        "expected_repair": "16/01/2011 02:00"
+      },
+      {
+        "row": 349,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "15/01/2011 14:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "15/01/2011 14:00"
+      },
+      {
+        "row": 933,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "08/02/2011 22:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "08/02/2011 22:00"
+      },
+      {
+        "row": 1092,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 614,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 894,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "07/02/2011 07:00",
+        "corrupted_value": "2011-07-03",
+        "expected_repair": "07/02/2011 07:00"
+      },
+      {
+        "row": 1059,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "14/02/2011 04:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "14/02/2011 04:00"
+      },
+      {
+        "row": 780,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "8",
+        "corrupted_value": 9.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 287,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "13/01/2011 00:00",
+        "corrupted_value": "2011-01-14",
+        "expected_repair": "13/01/2011 00:00"
+      },
+      {
+        "row": 22,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 1120,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 259,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "11/01/2011 20:00",
+        "corrupted_value": "2011-11-02",
+        "expected_repair": "11/01/2011 20:00"
+      },
+      {
+        "row": 148,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "07/01/2011 05:00",
+        "corrupted_value": "2011-07-02",
+        "expected_repair": "07/01/2011 05:00"
+      },
+      {
+        "row": 67,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 108,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "05/01/2011 13:00",
+        "corrupted_value": "2011-05-02",
+        "expected_repair": "05/01/2011 13:00"
+      },
+      {
+        "row": 604,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "26/01/2011 05:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "26/01/2011 05:00"
+      },
+      {
+        "row": 173,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "08/01/2011 06:00",
+        "corrupted_value": "2011-08-02",
+        "expected_repair": "08/01/2011 06:00"
+      },
+      {
+        "row": 1154,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 1097,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "15/02/2011 18:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "15/02/2011 18:00"
+      },
+      {
+        "row": 692,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "29/01/2011 21:00",
+        "corrupted_value": "2011-01-30",
+        "expected_repair": "29/01/2011 21:00"
+      },
+      {
+        "row": 994,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "11/02/2011 11:00",
+        "corrupted_value": "2011-11-03",
+        "expected_repair": "11/02/2011 11:00"
+      },
+      {
+        "row": 129,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "06/01/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "06/01/2011 10:00"
+      },
+      {
+        "row": 65,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "03/01/2011 18:00",
+        "corrupted_value": "2011-03-02",
+        "expected_repair": "03/01/2011 18:00"
+      },
+      {
+        "row": 683,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "29/01/2011 12:00",
+        "corrupted_value": "2011-01-30",
+        "expected_repair": "29/01/2011 12:00"
+      },
+      {
+        "row": 792,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 1023,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "8",
+        "corrupted_value": 9.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 695,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 828,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "04/02/2011 13:00",
+        "corrupted_value": "2011-04-03",
+        "expected_repair": "04/02/2011 13:00"
+      },
+      {
+        "row": 97,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 1139,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 150,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "07/01/2011 07:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "07/01/2011 07:00"
+      },
+      {
+        "row": 501,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "21/01/2011 22:00",
+        "corrupted_value": "2011-01-22",
+        "expected_repair": "21/01/2011 22:00"
+      },
+      {
+        "row": 599,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 627,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "27/01/2011 04:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "27/01/2011 04:00"
+      },
+      {
+        "row": 932,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 413,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "7",
+        "corrupted_value": 8.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 266,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      },
+      {
+        "row": 997,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "11/02/2011 14:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "11/02/2011 14:00"
+      },
+      {
+        "row": 967,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "10/02/2011 08:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "10/02/2011 08:00"
+      },
+      {
+        "row": 977,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "10/02/2011 18:00",
+        "corrupted_value": "2011-10-03",
+        "expected_repair": "10/02/2011 18:00"
+      },
+      {
+        "row": 809,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "03/02/2011 18:00",
+        "corrupted_value": "2011-03-03",
+        "expected_repair": "03/02/2011 18:00"
+      },
+      {
+        "row": 1197,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 105,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "05/01/2011 10:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "05/01/2011 10:00"
+      },
+      {
+        "row": 178,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "08/01/2011 11:00",
+        "corrupted_value": "2011-08-02",
+        "expected_repair": "08/01/2011 11:00"
+      },
+      {
+        "row": 803,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "1",
+        "corrupted_value": -1.0,
+        "expected_repair": 1.0
+      },
+      {
+        "row": 962,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "10/02/2011 03:00",
+        "corrupted_value": "2011-10-03",
+        "expected_repair": "10/02/2011 03:00"
+      },
+      {
+        "row": 787,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "02/02/2011 20:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "02/02/2011 20:00"
+      },
+      {
+        "row": 771,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "5",
+        "corrupted_value": -5.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 162,
+        "column": "Quantity",
+        "issue_type": "Plausible quantity corruption",
+        "difficulty": "plausible",
+        "original_value": "5",
+        "corrupted_value": 6.0,
+        "expected_repair": 5.0
+      },
+      {
+        "row": 504,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "22/01/2011 01:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "22/01/2011 01:00"
+      },
+      {
+        "row": 599,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "26/01/2011 00:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "26/01/2011 00:00"
+      },
+      {
+        "row": 274,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "4",
+        "corrupted_value": -4.0,
+        "expected_repair": 4.0
+      },
+      {
+        "row": 89,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 730,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "31/01/2011 11:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "31/01/2011 11:00"
+      },
+      {
+        "row": 1072,
+        "column": "InvoiceDate",
+        "issue_type": "Invalid date",
+        "difficulty": "obvious",
+        "original_value": "14/02/2011 17:00",
+        "corrupted_value": "not-a-date",
+        "expected_repair": "14/02/2011 17:00"
+      },
+      {
+        "row": 949,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "7",
+        "corrupted_value": -7.0,
+        "expected_repair": 7.0
+      },
+      {
+        "row": 508,
+        "column": "InvoiceDate",
+        "issue_type": "Plausible date corruption",
+        "difficulty": "plausible",
+        "original_value": "22/01/2011 05:00",
+        "corrupted_value": "2011-01-23",
+        "expected_repair": "22/01/2011 05:00"
+      },
+      {
+        "row": 455,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "2",
+        "corrupted_value": -2.0,
+        "expected_repair": 2.0
+      },
+      {
+        "row": 846,
+        "column": "Quantity",
+        "issue_type": "Negative quantity",
+        "difficulty": "obvious",
+        "original_value": "8",
+        "corrupted_value": -8.0,
+        "expected_repair": 8.0
+      }
+    ],
+    "new_detected": [
+      [
+        2,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        2,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        9,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        10,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        10,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        10,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        11,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        13,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        13,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        17,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        19,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        20,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        22,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        22,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        31,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        36,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        40,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        49,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        49,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        62,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        64,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        67,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        73,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        74,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        75,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        75,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        80,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        80,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        89,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        89,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        97,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        98,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        105,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        107,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        109,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        119,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        129,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        139,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        150,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        160,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        169,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        169,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        171,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        173,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        173,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        175,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        175,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        176,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        181,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        183,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        183,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        185,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        187,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        189,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        190,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        206,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        209,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        215,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        215,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        225,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        232,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        240,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        240,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        242,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        242,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        246,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        252,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        252,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        253,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        266,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        266,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        268,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        274,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        275,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        280,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        282,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        282,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        286,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        289,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        289,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        290,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        297,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        305,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        305,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        308,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        308,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        310,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        318,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        319,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        328,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        328,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        330,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        334,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        334,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        335,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        340,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        340,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        349,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        357,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        374,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        374,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        375,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        381,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        381,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        383,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        383,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        387,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        387,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        388,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        394,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        395,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        395,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        398,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        410,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        415,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        417,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        417,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        419,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        419,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        422,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        422,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        425,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        430,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        435,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        445,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        452,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        453,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        455,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        457,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        463,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        463,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        469,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        476,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        476,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        482,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        489,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        498,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        504,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        518,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        529,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        535,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        541,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        542,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        545,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        547,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        551,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        568,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        582,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        582,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        584,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        588,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        588,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        593,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        594,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        599,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        599,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        604,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        608,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        614,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        622,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        627,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        635,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        645,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        648,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        648,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        651,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        657,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        661,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        662,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        668,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        682,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        687,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        687,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        688,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        688,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        688,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        700,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        707,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        712,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        712,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        714,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        726,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        726,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        730,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        735,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        742,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        745,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        749,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        750,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        753,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        754,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        759,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        759,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        771,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        779,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        786,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        786,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        787,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        792,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        799,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        801,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        801,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        801,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        803,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        804,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        804,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        815,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        816,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        836,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        839,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        841,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        846,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        846,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        850,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        850,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        850,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        859,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        869,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        873,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        879,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        879,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        884,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        888,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        889,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        903,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        910,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        925,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        932,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        932,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        933,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        941,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        941,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        947,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        949,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        949,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        950,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        953,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        953,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        962,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        963,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        964,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        966,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        967,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        971,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        971,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        972,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        989,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        993,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        997,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        997,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        997,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1009,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1015,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1019,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1034,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1037,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1044,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1050,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1052,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1052,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1058,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1059,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1072,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1073,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1073,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1076,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1076,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1078,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1085,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1095,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1097,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1101,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1102,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1107,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1108,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1108,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1113,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1115,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1116,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1122,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1128,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1131,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1132,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1132,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1132,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1134,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1134,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1137,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1139,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1140,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1145,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1145,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1145,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1155,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1158,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1161,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1168,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1169,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1170,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1170,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1171,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1171,
+        "Quantity",
+        "Statistical outlier"
+      ],
+      [
+        1172,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1174,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1174,
+        "Quantity",
+        "Negative quantity"
+      ],
+      [
+        1175,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1178,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1182,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1193,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1197,
+        "InvoiceDate",
+        "Invalid date"
+      ],
+      [
+        1197,
+        "Quantity",
+        "Negative quantity"
+      ]
+    ],
+    "baseline_findings_before_injection": 1904,
+    "true_positives": 253,
+    "false_positives": 58,
+    "false_negatives": 228,
+    "precision_pct": 81.35,
+    "recall_pct": 52.6,
+    "f1_pct": 63.89,
+    "no_positive_predictions": false,
+    "clean_false_positive_rate_pct": 0.6349,
+    "repair_attempts": 119,
+    "repairable_cases": 481,
+    "repair_correct": 114,
+    "repair_unsafe": 5,
+    "repair_accuracy_pct": 95.8,
+    "safe_repair_coverage_pct": 23.7,
+    "unsafe_repair_rate_pct": 4.2,
+    "blocked_or_reviewed": 362,
+    "quarantined_rows": 138,
+    "post_repair_findings": 583,
+    "obvious_case_metrics": {
+      "true_positives": 253,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision_pct": 100.0,
+      "recall_pct": 100.0,
+      "f1_pct": 100.0,
+      "no_positive_predictions": false
+    },
+    "plausible_case_metrics": {
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 228,
+      "precision_pct": null,
+      "recall_pct": 0.0,
+      "f1_pct": null,
+      "no_positive_predictions": true
+    },
+    "research_readiness": {
+      "status": "recommended",
+      "reference_rows": 1202,
+      "minimum_recommended_rows": 30,
+      "reason": "Below 30 rows, percentage-based corruption scenarios remain coarse and should be treated as a demonstration. Publication claims should use larger independently sourced datasets."
+    },
+    "method": "Controlled corruptions are applied directly to the uploaded reference without pre-cleaning by SelfHealDS. Each case stores its original value, corrupted value, issue label and expected repair where applicable. Natural pre-existing findings are subtracted from the prediction set so they do not become benchmark false positives. The corruption mix includes obvious rule violations and plausible-but-wrong values to test the abstention boundary.",
+    "metric_definitions": {
+      "precision": "TP/(TP+FP), conditional on the system making a positive detection.",
+      "recall": "TP/(TP+FN), proportion of injected labelled corruptions detected with the matching issue label.",
+      "f1": "Harmonic mean of precision and recall.",
+      "repair_accuracy": "Correct repaired target divided by automatic repair attempts; conditional on automation. Non-inferable cases are never counted as correct.",
+      "safe_repair_coverage": "Correct automatic repairs divided by injected cases with an explicitly known safe target. This measures how much of the safely repairable benchmark was actually repaired correctly.",
+      "clean_false_positive_rate": "False positives divided by the cells that were NOT deliberately corrupted (total reference cells minus injected cases). Measures how often the detector raises a finding on data it had no reason to flag.",
+      "unsafe_repair_rate": "Unsafe/incorrect automatic repairs divided by automatic repair attempts; N/A when no automatic repair was attempted."
+    },
+    "precision": 81.35,
+    "recall": 52.6,
+    "f1": 63.89
+  },
+  "llm_repair_scores": {
+    "repair_attempts": 95,
+    "repairable_cases": 132,
+    "repair_correct": 95,
+    "repair_unsafe": 0,
+    "not_touched": 37,
+    "repair_accuracy_pct": 100.0,
+    "safe_repair_coverage_pct": 71.97,
+    "unsafe_repair_rate_pct": 0.0
+  },
+  "llm_collateral_changes": {
+    "comparable": true,
+    "collateral_change_count": 3,
+    "collateral_change_rate_pct": 0.1323,
+    "examples": [
+      {
+        "row": 33,
+        "column": "Quantity",
+        "original": "invalid",
+        "llm_value": "5"
+      },
+      {
+        "row": 72,
+        "column": "InvoiceDate",
+        "original": "bad-date",
+        "llm_value": "04/01/2011 01:00"
+      },
+      {
+        "row": 88,
+        "column": "UnitPrice",
+        "original": -5.0,
+        "llm_value": 5.0
+      }
+    ]
+  },
+  "llm_output_parse_error": null,
+  "domain_trap_check": {
+    "applicable": true,
+    "legitimate_negative_quantities_checked": 38,
+    "incorrectly_altered": 33,
+    "incorrectly_altered_rate_pct": 86.84,
+    "examples": [
+      {
+        "row": 2,
+        "original": -7.0,
+        "llm_value": 7.0
+      },
+      {
+        "row": 9,
+        "original": -3.0,
+        "llm_value": 3.0
+      },
+      {
+        "row": 10,
+        "original": -9.0,
+        "llm_value": 9.0
+      },
+      {
+        "row": 11,
+        "original": -1.0,
+        "llm_value": 1.0
+      },
+      {
+        "row": 13,
+        "original": -6.0,
+        "llm_value": 6.0
+      },
+      {
+        "row": 22,
+        "original": -8.0,
+        "llm_value": 8.0
+      },
+      {
+        "row": 49,
+        "original": -5.0,
+        "llm_value": 5.0
+      },
+      {
+        "row": 64,
+        "original": -1.0,
+        "llm_value": 1.0
+      },
+      {
+        "row": 67,
+        "original": -5.0,
+        "llm_value": 5.0
+      },
+      {
+        "row": 74,
+        "original": -2.0,
+        "llm_value": 2.0
+      },
+      {
+        "row": 75,
+        "original": -7.0,
+        "llm_value": 7.0
+      },
+      {
+        "row": 80,
+        "original": -9.0,
+        "llm_value": 9.0
+      },
+      {
+        "row": 89,
+        "original": -7.0,
+        "llm_value": 7.0
+      },
+      {
+        "row": 97,
+        "original": -2.0,
+        "llm_value": 2.0
+      },
+      {
+        "row": 169,
+        "original": -7.0,
+        "llm_value": 7.0
+      }
+    ],
+    "interpretation": "Any non-zero rate here means the baseline silently overwrote values that the dataset's own documentation defines as correct \u2014 the exact failure mode SelfHealDS's case-specific constraints are designed to prevent."
+  },
+  "capability_checklist": {
+    "Per-cell rule ID attached to every change": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Evidence-strength / confidence score per change": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Human-readable evidence basis per change": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Explicit repair-decision hierarchy (deterministic > imputation > semantic > flag-only > quarantine)": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Post-repair re-validation gate (pass/fail per cell)": {
+      "selfhealds": true,
+      "llm_baseline": false
+    },
+    "Abstains instead of fabricating when evidence is insufficient": {
+      "selfhealds": true,
+      "llm_baseline": "not guaranteed by a plain cleaning prompt"
+    },
+    "Deterministic / reproducible output for identical input+seed": {
+      "selfhealds": true,
+      "llm_baseline": "not guaranteed (model/version/decoding dependent)"
+    },
+    "Exportable machine-readable audit trail": {
+      "selfhealds": true,
+      "llm_baseline": false
+    }
+  },
+  "notes": [
+    "SelfHealDS metrics are computed on the FULL messy dataset via the existing evaluate_detection() benchmark, unmodified.",
+    "LLM metrics are computed only over the row-capped subset actually sent to the model, because general-purpose chat completion has a practical context/cost limit that the deterministic pipeline does not. This asymmetry is itself part of the finding and should be stated explicitly in the paper's Results section, not hidden by reporting only percentages.",
+    "expected_repair values with a value of None are non-inferable by design (e.g. a three-digit phone number); the LLM, like SelfHealDS, cannot score 'correct' on these \u2014 any change to such a cell is counted as unsafe."
+  ]
+}

@@ -1,0 +1,11 @@
+### T1 — Case-study characteristics
+
+| Case ID                   | Name                                       | Domain                                   |   Year | Rows x Cols   | Ground truth      | Source                                                        |
+|:--------------------------|:-------------------------------------------|:-----------------------------------------|-------:|:--------------|:------------------|:--------------------------------------------------------------|
+| nasa_mars_climate_orbiter | Mars Climate Orbiter — unit mismatch       | Aerospace                                |   1999 | 1015 x 9      | No                | NASA / JPL                                                    |
+| holoclean_hospital        | Hospital quality benchmark                 | Healthcare                               |   2017 | 183 x 19      | Yes (independent) | CMS Hospital Compare / HoloClean benchmark                    |
+| holoclean_flights         | Flights multi-source consistency benchmark | Transportation                           |   2017 | 803 x 15      | Yes (independent) | HoloClean / flight-data benchmark                             |
+| chicago_food_inspections  | Chicago Food Inspections data-quality case | Government / Food Safety                 |   2010 | 1003 x 16     | No                | City of Chicago Department of Public Health                   |
+| uci_air_quality           | UCI Air Quality sensor data                | Environmental / Sensor                   |   2008 | 1200 x 15     | No                | UCI Machine Learning Repository / urban air-quality study     |
+| uci_online_retail         | UCI Online Retail transaction semantics    | Business / Finance-adjacent Transactions |   2011 | 1202 x 8      | No                | UCI Machine Learning Repository / UK online retailer          |
+| uci_adult_census          | UCI Adult / Census Income                  | Government / Census                      |   1994 | 3000 x 15     | No                | UCI Machine Learning Repository / 1994 U.S. Census extraction |

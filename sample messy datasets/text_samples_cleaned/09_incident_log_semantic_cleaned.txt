@@ -1,0 +1,5 @@
+Ticket T-900 | status: Closed | priority: High | resolution: Service Restored| city: Chicago, state: Illinois, country: United States
+Ticket T-900 | status: Closed | priority: High | resolution: Service Restored
+Ticket T-900 | status: Closed| priority: High | resolution: Service Restored
+The outage occurred after the configuration change.
+Owner email: ops@company.com

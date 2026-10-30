@@ -1,0 +1,4 @@
+Customer C101 | city: Mumbai, state: Maharashtra, country: India | status: open | priority: High
+Customer C101 | city: Mumbai, state: Maharashtra, country: India | status: open | priority: High
+Contact email: help@example.com
+The customer received the replacement but the address was entered incorrectly.

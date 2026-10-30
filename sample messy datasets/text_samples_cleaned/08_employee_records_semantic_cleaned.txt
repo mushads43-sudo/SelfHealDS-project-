@@ -1,0 +1,6 @@
+Employee E101 | department: Finance | status: In Progress | city: Pune, state: Maharashtra, country: India
+Employee E101 | department: Finance | status: In Progress
+Employee E101 | department: Finance| status: In Progress
+Employee E205 | department: Engineering | status: completed | city: Bengaluru, state: Karnataka, country: India
+Employee E205 | department: Engineering | status: completed
+The management report definitely contains a separate summary for each employee.
